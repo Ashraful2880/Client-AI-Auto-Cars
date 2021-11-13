@@ -1,0 +1,10 @@
+.user-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.userName {
+    display: inline-block;
+    margin-top: 12px;
+}

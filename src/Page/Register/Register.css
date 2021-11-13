@@ -1,0 +1,24 @@
+.register-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.801)), url('../../Image/register1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.reg-input:focus {
+    outline: 0;
+}
+
+.reg-area,
+.reg-text {
+    box-shadow: 10px 10px 30px rgb(207, 207, 207);
+}
+
+.social-sign-button {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 50%;
+    text-decoration: none;
+}

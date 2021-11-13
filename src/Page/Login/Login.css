@@ -1,0 +1,18 @@
+.login-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.911)), url('../../Image/loginbg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 80vh;
+}
+
+.login-design,
+.login-text {
+    box-shadow: 10px 10px 30px rgb(180, 180, 180);
+    border-radius: 10px;
+}
+
+.login-input:focus {
+    outline: 0;
+}

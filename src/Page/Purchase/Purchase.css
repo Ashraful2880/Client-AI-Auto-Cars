@@ -1,0 +1,26 @@
+.orderImage {
+    box-shadow: 10px 10px 30px rgb(128, 128, 128);
+}
+
+.order-container {
+    position: relative;
+}
+
+.head {
+    position: absolute;
+    top: 6%;
+    left: 3%;
+}
+
+.duration {
+    position: absolute;
+    top: 14%;
+    left: 3%;
+}
+.input-container input {
+    border-bottom: 1.5px solid rgb(199, 4, 4)!important;
+}
+
+.input-container input:focus {
+    outline: none;
+}

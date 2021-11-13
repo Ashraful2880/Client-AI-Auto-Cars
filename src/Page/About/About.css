@@ -1,0 +1,12 @@
+.about-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)), url('../../Image/car.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 40px;
+}
+
+.about-text p {
+    color: #dddddd !important;
+}

@@ -1,0 +1,29 @@
+.banner-container {
+    background-image: url("../../Image/bg.png");
+    background-color: #5a5a5a;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.banner-head {
+    position: absolute;
+    top: 38%;
+    left: 8%;
+}
+
+.banner-head h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+    line-height: 45px;
+}
+
+.banner-head h2 {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 50px;
+}
+
+.banner-head h3 {
+    font-size: 30px;
+}

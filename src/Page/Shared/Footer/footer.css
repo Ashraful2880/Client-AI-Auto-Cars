@@ -1,0 +1,22 @@
+.footer-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.794)), url("../../../Image/footer-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.social-area i {
+    padding: 10px;
+    transition: ease-in-out 0.2s;
+}
+
+.logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+
+.social-area i:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

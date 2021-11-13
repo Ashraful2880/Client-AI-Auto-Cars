@@ -1,0 +1,16 @@
+.myOrder-container{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.829),rgba(0, 0, 0, 0.801)),url('../../../Image/register1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 10px 10px 30px rgb(230, 230, 230);
+    border-radius: 10px;
+}
+.single-img {
+    transition: ease-in-out 0.3s;
+}
+
+.single-img:hover {
+    transform: scale(1.04);
+}
