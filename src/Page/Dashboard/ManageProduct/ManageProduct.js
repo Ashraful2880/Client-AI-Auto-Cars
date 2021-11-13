@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ManageProduct = ({product}) => {
-    const{url,name,price,model,modelYear,details, _id}=product;
+const ManageProduct = ({car}) => {
+    const{url,name,price,model,modelYear,details, _id}=car;
     const handleDelete=(id)=>{
         const proceed=window.confirm("Are You Sure ? Want To Delete ?");
         if (proceed){
