@@ -2,10 +2,6 @@
 .leftCard {
     background: linear-gradient(#000428, #004683);
 } 
-
-.rightCard {
-    height: 95vh;
-}
 .subMenu {
     height: 40px;
     position: relative;
