@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import useFirebase from '../../../Hooks/UseFirebase';
+import useAuth from '../../../Hooks/UseAuth';
 import MyOrder from '../MyOrder/MyOrder';
 import '../MyOrder/MyOrder.css';
 
 
 const MyOrders = () => {
-    const {user}=useFirebase();
+    const {user}=useAuth();
     const [orders,setOrders]=useState([]);
     
     useEffect(()=>{

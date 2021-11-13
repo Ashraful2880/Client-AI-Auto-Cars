@@ -1,12 +1,12 @@
 import React, {useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router';
-import useFirebase from '../../Hooks/UseFirebase';
+import useAuth from '../../Hooks/UseAuth';
 import './Purchase.css';
 
 const Purchase = () => {
     const {orderId}=useParams();
     const [order, setOrder]=useState({});
-    const {user}=useFirebase();
+    const {user}=useAuth();
 
     // Load Single Data <--------------------->
 
