@@ -4,7 +4,7 @@ import './OurBlogs.css';
 const OurBlogs = () => {
     const [blogs,setblogs]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/blogs')
+        fetch('https://serene-coast-79100.herokuapp.com/blogs')
         .then(res=>res.json())
         .then(data=>setblogs(data))
     },[]);

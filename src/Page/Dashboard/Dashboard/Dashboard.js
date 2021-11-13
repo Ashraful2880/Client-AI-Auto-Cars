@@ -19,7 +19,7 @@ const Dashboard = () => {
     const {user,handleSignOut}=useAuth();
 //<----------------- Load Admin Data From Database --------------->
     useEffect(()=>{
-        fetch(`http://localhost:5000/user/${user?.email}`)
+        fetch(`https://serene-coast-79100.herokuapp.com/user/${user?.email}`)
         .then(res=>res.json())
         .then(data=>setAdmin(data.admin))
     },[user.email]);

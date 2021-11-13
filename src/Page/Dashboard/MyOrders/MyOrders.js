@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [orders,setOrders]=useState([]);
     
     useEffect(()=>{
-        const url=`http://localhost:5000/myOrders/${user.email}`;
+        const url=`https://serene-coast-79100.herokuapp.com/myOrders/${user.email}`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setOrders(data))

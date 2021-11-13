@@ -8,7 +8,7 @@ const Header = () => {
     const{user,handleSignOut}=useAuth();
     return (
         <div className='relative mb-1'>
-          <nav className="navbar navbar-expand-lg navbar-light bg-success fixed-top py-1">
+          <nav className="navbar navbar-expand-lg navbar-light bg fixed-top py-1">
             <div className="container-fluid">
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@ const Header = () => {
                     <ul className="navbar-nav">
                       <li className="nav-item">
                         <span className="text-warning fs-6 userName ">{user.displayName}</span>
-                        <img className="user-image rounded-circle ms-3" src={user.photoURL} alt="user-img" />
+                        <img className="user-image rounded-circle ms-3 text-light" src={user.photoURL} alt="user-img" />
                       </li>
                       <li className="nav-item">
                         <Link onClick={handleSignOut} className="nav-link text-white fs-5" to="/home"><i className="fas fa-sign-out-alt"></i></Link>

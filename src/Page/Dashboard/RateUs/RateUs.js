@@ -7,7 +7,7 @@ const RateUs = () => {
     const { register, handleSubmit,reset, formState: { errors } } = useForm();
     const {user}=useAuth();
     const onSubmit = data => {
-        fetch('http://localhost:5000/addRating',{
+        fetch('https://serene-coast-79100.herokuapp.com/addRating',{
             method:"POST",
             headers:{'content-type':'application/json'},
             body:JSON.stringify(data)

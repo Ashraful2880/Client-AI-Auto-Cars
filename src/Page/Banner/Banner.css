@@ -1,6 +1,6 @@
 .banner-container {
     background-image: url("../../Image/bg.png");
-    background-color: #5a5a5a;
+    background-color: rgb(82, 0, 0);
     background-size: cover;
     background-position: center;
     height: 100vh;

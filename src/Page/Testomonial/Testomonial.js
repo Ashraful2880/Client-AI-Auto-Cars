@@ -5,7 +5,7 @@ import './Testomonial.css';
 const Testomonial = () => {
     const[ratings,setRatings]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/userRating')
+        fetch('https://serene-coast-79100.herokuapp.com/userRating')
         .then(res=>res.json())
         .then(data=>setRatings(data))
     },[])

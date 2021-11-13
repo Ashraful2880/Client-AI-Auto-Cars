@@ -11,7 +11,7 @@ const Purchase = () => {
     // Load Single Data <--------------------->
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/order/${orderId}`)
+        fetch(`https://serene-coast-79100.herokuapp.com/order/${orderId}`)
         .then(res=>res.json())
         .then(data=>setOrder(data))
     },[]);
@@ -37,7 +37,7 @@ const Purchase = () => {
         const newData={...order,...userInfo};
         delete newData?._id;
 
-        fetch('http://localhost:5000/purchaseConfirm',{
+        fetch('https://serene-coast-79100.herokuapp.com/purchaseConfirm',{
             method:"POST",
             headers:{'content-type':'application/json'},
             body:JSON.stringify(newData)
