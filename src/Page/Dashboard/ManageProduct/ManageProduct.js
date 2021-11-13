@@ -24,7 +24,7 @@ const ManageProduct = ({product}) => {
                 <div className="col-sm-12 col-md-12 col-lg-6">
                     <img className="w-75" src={url} alt="Product_Image" />
                 </div>
-                <div className="col-sm-12 col-md-12 col-lg-6 text-start border mb-4">
+                <div className="col-sm-12 col-md-12 col-lg-6 text-start border mb-4 mt-2">
                     <h4>Brand Name: <span className="text-danger">{name}</span></h4>
                     <h5>Model: <span className="text-danger">{model}</span></h5>
                     <h5>Model Year: <span className="text-danger">{modelYear}</span></h5>
