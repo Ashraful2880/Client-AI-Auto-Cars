@@ -10,6 +10,8 @@
 * React Nested Route.
 * CSS Framework-Bootstrap.
 * Deployed On Firebase
+* MongoDb
+* Node JS
 
 ## Features.
 
@@ -18,7 +20,6 @@
 * Email, Google & Github Authentication.
 * Responsive With Mobile Devices.
 * Database Integration.
-* Node Js & Mongo DB
 * Admin Dashboard features
 * Product Update Delete Features
 # niche-website-client-side-Ashraful2880
