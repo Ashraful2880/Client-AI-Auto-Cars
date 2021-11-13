@@ -25,7 +25,7 @@ const RateUs = () => {
         <div className="mb-3">
             <div className="row mx-auto rate-container d-flex flex-column justify-content-center align-items-center ">
                 <div className="col-sm-12 col-md-12 col-lg-4 mx-auto">
-                    <form onSubmit={handleSubmit(onSubmit)} className="">
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="container">
                             <h1 className="fw-bold text-danger">Feedback is Alwayes Welcome</h1>
                             <h4 className="mb-3 text-light">Please Drop Your Rating</h4>

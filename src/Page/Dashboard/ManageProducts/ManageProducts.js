@@ -8,7 +8,7 @@ const ManageProducts = () => {
         <div>
             <h2 className="pt-5 fw-bold">Update Your Products</h2>
             <h4 className="text-danger mb-5">Total Products {cars.length}</h4>
-            <hr />
+            <hr className="w-75 mx-auto"/>
             <div  className="container row mx-auto mb-4">
                 {
                     cars.map(car=><ManageProduct key={car._id} car={car}/>)

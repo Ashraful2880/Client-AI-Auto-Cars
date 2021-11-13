@@ -36,8 +36,8 @@ const Dashboard = () => {
     return (
         <div>
             <button onClick={myFunction} className="border-0 d-flex "><i className="fas fa-bars btn btn-danger toggle-button"></i></button>
-            <div className="d-flex flex-row rightCard" >
-                <div className="col-md-12 col-lg-3 col-sm-12" id="toogleDiv">
+            <div className="row mx-auto" >
+                <div className="col-md-12 col-lg-2 col-sm-12 px-0" id="toogleDiv">
                     <div className="card leftCard h-100 w-100 border-0 px-3">
                         <div className="d-flex flex-row align-items-center">
                             <img className="rounded-circle h-50 text-light" src={user?.photoURL} alt="User-Profile"/>
@@ -84,7 +84,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-12 col-lg-9 col-sm-12">
+                <div className="col-md-12 col-lg-10 col-sm-12 px-0">
                     <Switch>
                         <Route exact path={path}>
                             <DashboardHome/>
