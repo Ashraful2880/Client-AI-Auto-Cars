@@ -8,7 +8,7 @@
 
 **Type-Full Stack Car Sales Website**
 
-### front-End Technology:
+### Front-End Technology:
 
 * React JS.
 * React Router.
@@ -16,7 +16,6 @@
 * CSS Framework-Bootstrap.
 * Deployed On Netlify.
 * firebase Authentication.
-* Admin Dashboard.
 
 ### Back-End Technology:
 
