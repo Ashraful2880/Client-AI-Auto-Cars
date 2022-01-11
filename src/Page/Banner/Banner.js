@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Banner.css';
 
 const Banner = () => {
@@ -12,25 +13,31 @@ const Banner = () => {
                     <div className="caption-text text-start">
                         <h1>FIND YOUR DREAM CAR</h1>
                         <p className="ms-2">When we say your vehicle's in the best hands possible, were not just saying what you want to hear. We're putting our money where our words are, doing exactly what your vehicle needs to protect you and your family.</p>
-                        <button className="btn btn-warning ms-3">Shop Now</button>
+                        <Link to="/explore">
+                            <button className="btn btn-warning ms-3">Shop Now</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="carousel-item">
                     <img src="https://i.ibb.co/dKXQ5th/Slider3.jpg" className="d-block w-100" alt="Slider"/>
                     <div className="overlay"></div>
                     <div className="caption-text text-start">
-                        <h1>BUT LATEST AUTOMOBILES</h1>
+                        <h1>BUY CAR WITH LOAN</h1>
                         <p className="ms-2">When we say your vehicle's in the best hands possible, were not just saying what you want to hear. We're putting our money where our words are, doing exactly what your vehicle needs to protect you and your family.</p>
-                        <button className="btn btn-warning ms-3">Shop Now</button>
+                        <Link to="/explore">
+                            <button className="btn btn-warning ms-3">Shop Now</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="carousel-item">
                     <img src="https://i.ibb.co/XDSPfr0/Slider2.jpg" className="d-block w-100" alt="Slider"/>
                     <div className="overlay"></div>
                     <div className="caption-text text-start">
-                        <h1>FIND YOUR DREAM CAR</h1>
+                        <h1>20% OFF TO BUY A CAR</h1>
                         <p className="ms-2">When we say your vehicle's in the best hands possible, were not just saying what you want to hear. We're putting our money where our words are, doing exactly what your vehicle needs to protect you and your family.</p>
-                        <button className="btn btn-warning ms-3">Shop Now</button>
+                        <Link to="/explore">
+                            <button className="btn btn-warning ms-3">Shop Now</button>
+                        </Link>
                     </div>
                 </div>
             </div>
