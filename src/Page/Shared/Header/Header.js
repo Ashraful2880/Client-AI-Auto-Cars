@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/UseAuth';
 import './Header.css';
-import mainLogo from '../../../Image/logo.png';
+import mainLogo from '../../../Image/Main-Logo.png';
 
 const Header = () => {
     const{user,handleSignOut}=useAuth();
     return (
-        <div className='relative mb-1'>
-          <nav className="navbar navbar-expand-lg navbar-light bg fixed-top py-1">
+        <div className='relative mb-5'>
+          <nav className="navbar navbar-expand-lg bg bg-light fixed-top py-2">
             <div className="container-fluid">
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

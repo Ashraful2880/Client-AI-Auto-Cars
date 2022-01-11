@@ -6,18 +6,18 @@
     height: 30px;
     margin-right: 10px;
 }
-
 .userName {
     display: inline-block;
     margin-top: 12px;
 }
+.nav-link{
+    border: 2px solid transparent;
+}
 .nav-link:hover{
     transition: ease-in-out 0.4s;
-    background-color: #fff;
-    color: #004683!important;
-    transform:scale(1.03)
+    border-bottom: 2px solid #fff;
 }
 .nav-link:focus{
-    background-color: #fff;
-    color: #004683!important;
+    color: rgb(177, 177, 177)!important;
+    border-bottom: 2px solid #fff;
 }
