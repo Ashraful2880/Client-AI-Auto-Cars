@@ -9,11 +9,11 @@ const About = () => {
                     <h2>Who We Are</h2>
                     <h5>Few Words About Us</h5>
                 </div>
-                <div className="col-sm-12 col-md-12 col-lg-6 mx-auto" data-aos="fade-right"
+                <div className="col-sm-12 col-md-12 col-lg-6 mx-auto" data-aos="fade-down"
      data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <img className="p-5 w-100" src={aboutCar} alt="aboutImage" />
                 </div>
-                <div className="col-sm-12 col-md-12 col-lg-6 about-text text-start"  data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div className="col-sm-12 col-md-12 col-lg-6 about-text text-start"  data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h2 className=" text-danger">Mr Automative</h2>
                     <hr className="text-white mb-5" />
                     <p className="mb-3">
