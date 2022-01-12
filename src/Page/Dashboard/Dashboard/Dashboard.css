@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
+    height: 100%;
 }
 .leftCard {
     background: linear-gradient(#000428, #004683);
@@ -20,7 +20,6 @@
     font-size: 18px;
     top: 10px;
 }
-
 .subMenu span {
     position: absolute;
     right: 8px;
@@ -30,7 +29,6 @@
     top: 10px;
     letter-spacing: 1px;
 }
-
 .subMenu:hover {
     background-color: #d42d2d;
 }

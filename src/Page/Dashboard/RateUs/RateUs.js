@@ -22,23 +22,22 @@ const RateUs = () => {
     };
     
     return (
-        <div className="mb-3">
-            <div className="row mx-auto rate-container d-flex flex-column justify-content-center align-items-center ">
+      
+            <div className="row mx-auto rate-container justify-content-center align-items-center ">
                 <div className="col-sm-12 col-md-12 col-lg-4 mx-auto">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="container">
-                            <h1 className="fw-bold text-danger">Feedback is Alwayes Welcome</h1>
-                            <h4 className="mb-3 text-light">Please Drop Your Rating</h4>
+                            <h2 className="fw-bold text-danger">Feedback is Alwayes Welcome</h2>
+                            <h4 className="mb-5 text-light">Give A Feedback Rating</h4>
                             <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2" placeholder="Your Name" type="text" {...register("name", { required: true })} />
                             <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2" placeholder="Rating (Max-5)" type="number"{...register("star", { min: 2, max: 5 },{ required: true })} />
-                            <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2" placeholder="Your Image" defaultValue={user?.photoURL} type="text"{...register("url", { required: true })} />
+                            <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2 text-light" type="file"{...register("url", { required: true })} />
                             <textarea className="w-100 p-2 mb-3 rounded-3 border-1 my-2" placeholder="Your Valuable Comment"{...register("comment", { required: true })} /> 
-                            <input className="w-100 p-2 mb-5 rounded-3 border-1 my-2 btn btn-danger" type="submit" />
+                            <input className="w-100 p-2 mb-5 rounded-3 border-1 my-2 btn btn-outline-danger" type="submit" />
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
     );
 };
 

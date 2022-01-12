@@ -15,14 +15,12 @@ const MyOrders = () => {
         .then(data=>setOrders(data))
     },[user]);
     return (
-        <div>
-            <div className="myOrder-container mb-5">
-                <h2 className="text-light pt-5">Your All Orders Here</h2>
-                <h3 className="text-danger pb-5">Recent Orders: {orders.length}</h3>
-            {
-                orders.map(order=><MyOrder key={order._id} order={order}/>)
-            }
-            </div>
+        <div className="myOrder-container text-light">
+            <h2 className="pt-4">My All Orders</h2>
+            <h4 className="pb-4">Current Orders: <span className="text-danger">{orders.length}</span> </h4>
+        {
+            orders.map(order=><MyOrder key={order._id} order={order}/>)
+        }
         </div>
     );
 };

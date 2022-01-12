@@ -12,7 +12,7 @@ const Register = () => {
         <div className="mt-5 mx-auto border-2 rounded-3 register-container">
             <div className="rounded-3 reg-area mx-auto">
                 <div className="mx-auto col-lg-4 col-md-6 col-sm-12">
-                    <h2 className="text-light pt-5">Please Signup-in</h2>
+                    <h2 className="text-light pt-5">Please Signup</h2>
                     <h3 className="text-danger fst-italic mb-5">AI Auto Cars</h3>
                     <form onSubmit={handleRegister}>
                         {user.email?history.push('/explore'):''}

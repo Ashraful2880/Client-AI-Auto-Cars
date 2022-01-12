@@ -34,8 +34,10 @@ const Dashboard = () => {
    }
 
     return (
-        <div>
-            <button onClick={myFunction} className="border-0 d-flex "><i className="fas fa-bars btn btn-danger toggle-button"></i></button>
+        <>
+            <button onClick={myFunction} className="border-0 d-flex">
+                <i className="fas fa-bars btn btn-danger toggle-button mt-2"></i>
+            </button>
             <div className="row mx-auto" >
                 <div className="col-md-12 col-lg-2 col-sm-12 px-0" id="toogleDiv">
                     <div className="card leftCard h-100 w-100 border-0 px-3">
@@ -75,7 +77,7 @@ const Dashboard = () => {
                             </button>
                         </>
                         }
-                                <span className="mt-4 text-secondary">Others</span>
+                            <span className="mt-4 text-secondary">Others</span>
                             <button className="subMenu btn mt-3 w-100 border-0 rounded-3">
                                 <Link onClick={handleSignOut} className="nav-link text-white fs-5" to="/home">
                                     <span>Logout</span>
@@ -113,7 +115,7 @@ const Dashboard = () => {
                     </Switch>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
