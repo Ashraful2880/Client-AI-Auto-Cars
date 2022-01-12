@@ -35,14 +35,14 @@ const Dashboard = () => {
 
     return (
         <>
-            <button onClick={myFunction} className="border-0 d-flex">
+            <button onClick={myFunction} className="border-0 d-flex toggle-container">
                 <i className="fas fa-bars btn btn-danger toggle-button mt-2"></i>
             </button>
             <div className="row mx-auto" >
                 <div className="col-md-12 col-lg-2 col-sm-12 px-0" id="toogleDiv">
                     <div className="card leftCard h-100 w-100 border-0 px-3">
                         <div className="d-flex flex-row align-items-center">
-                            <img className="rounded-circle h-50 text-light" src={user?.photoURL} alt="User-Profile"/>
+                            <img className="rounded-circle h-50 text-light ms-5" src={user?.photoURL} alt="User-Profile"/>
                             <span className="text-light ms-5 fs-5">{user?.displayName}</span>
                         </div>
                         <hr className="text-light"/>
