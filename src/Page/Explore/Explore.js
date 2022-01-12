@@ -6,7 +6,7 @@ const Explore = () => {
     const [cars]=useServices();
     return (
         <div>
-            <h2 className="text-danger pt-5 mb-5 fw-bold">Our Awesome Car Collections</h2>
+            <h2 className="text-danger pt-4 mb-5 fw-bold"> Awesome Car Collections </h2>
             <div  className="container row mx-auto mb-4">
                 {
                     cars.map((car)=><Car key={car._id} car={car}/>)

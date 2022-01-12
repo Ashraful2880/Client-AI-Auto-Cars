@@ -10,15 +10,17 @@ const OurBlogs = () => {
     },[]);
     return (
         <div>
-            <h1 className="text-danger my-5 fw-bold">Our Recent Blogs</h1>
+            <h2 className="fw-bold mt-3 mb-5">Our Recent Blogs</h2>
             <div className="row container mx-auto">
             {
                 blogs.map(blog=>
-                        <div key={blog._id} className="blog-container col-lg-4 col-md-6 col-sm-12 text-start mb-5">
+                        <div key={blog._id} className="blog-container col-lg-4 col-md-6 col-sm-12 text-start mb-5 border" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
                             <img className="w-100 mb-3 rounded-3" src={blog.url} alt="news-pic" />
-                            <h4 className="text-danger mb-3">{blog.name}</h4>
+                            <h4 className="mb-3">{blog.name}</h4>
                             <p className="text-secondary">{blog.description}</p>
-                            <button className="btn btn-danger mt-3 mb-5">Read More..</button>
+                            <button className="btn btn-danger mt-2 mb-3">Read More..</button>
                         </div>
                 )
             }

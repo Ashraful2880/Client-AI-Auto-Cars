@@ -34,7 +34,7 @@ const Register = () => {
                             <p className="fw-bold text-light">Or</p>
                         </div>
                     </form>
-                        <div className="mx-auto mb-3 pb-5">
+                        <div className="mx-auto pb-5">
                             <button onClick={googleSignIn} className=" border social-sign-button border border-danger border-2">
                                 <img className="w-100" src={google} alt="googleImage" />
                             </button>

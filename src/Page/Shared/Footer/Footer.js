@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './footer.css';
+import mainLogo from '../../../Image/Main-Logo.png'
 
 const Footer = () => {
     return (
@@ -8,9 +9,9 @@ const Footer = () => {
             <div className="row container mx-auto">
                 <div className="col-lg-3 col-md-6 col-sm-12 text-start text-white">
                     <Link className="text-decoration-none" to="/home">
-                        <h4 className="logo text-danger fw-bold fst-italic border border-1 p-1 ps-2 w-25">A<span className="text-light">C</span></h4>
+                        <img className="w-100" src={mainLogo} alt="Main Logo" />
                     </Link>
-                    <h5 className="text-danger fst-italic">AI Auto Cars</h5>
+                    <h5 className="text-danger fst-italic">Mr. Automative</h5>
                     <p>Company of Cars also celebrates the diversity of our community. We strive to be good corporate citizens and give back wherever we can. We recognize the multiplicity of ethnic backgrounds that make up the fabric of Canadian society</p>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-6 text-start text-white">
@@ -33,8 +34,8 @@ const Footer = () => {
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12 text-start text-white">
                     <h5 className="mb-4 text-danger">Contact Information</h5>
-                    <h5> <i className="fas fa-phone-alt me-2 text-danger"> </i>+0123-<span className="text-danger">456789</span> </h5>
-                    <p> <i className="fas fa-envelope me-2 text-danger"> </i> support@example.com</p>
+                    <h5> <i className="fas fa-phone-alt me-2 text-danger"> </i>+880-<span className="text-danger">1974238487</span> </h5>
+                    <p> <i className="fas fa-envelope me-2 text-danger"> </i> contact.ashraful1@gmail.com</p>
                     <p> <i className="fas fa-map-marker-alt me-2 text-danger"> </i> ABC Road, XYZ City, New York</p>
                 </div>
                 <hr className="text-white" />
