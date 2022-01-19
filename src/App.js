@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './Page/Home/Home';
+
 import Footer from './Page/Shared/Footer/Footer';
 import About from './Page/About/About';
 import Header from './Page/Shared/Header/Header';
@@ -15,6 +15,7 @@ import Dashboard from './Page/Dashboard/Dashboard/Dashboard';
 import ManageOrders from './Page/Dashboard/ManageOrders/ManageOrders';
 import MyOrders from './Page/Dashboard/MyOrders/MyOrders';
 import RateUs from './Page/Dashboard/RateUs/RateUs';
+import Home from './Page/Home/Home/Home';
 
 function App() {
   return (

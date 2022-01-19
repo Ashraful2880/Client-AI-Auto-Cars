@@ -18,9 +18,11 @@ const OurBlogs = () => {
                         data-aos-easing="linear"
                         data-aos-duration="1500">
                             <img className="w-100 mb-3 rounded-3" src={blog.url} alt="news-pic" />
-                            <h4 className="mb-3">{blog.name}</h4>
+                            <span className="bg-warning px-2 py-1 rounded-3">Date: {blog.date}</span>
+                            <h4 className="mb-3 mt-2">{blog.name}</h4>
                             <p className="text-secondary">{blog.description}</p>
-                            <button className="btn btn-danger mt-2 mb-3">Read More..</button>
+                            <button className="btn btn-danger mt-2 mb-4">Read More..</button>
+                            <span className="ms-4 author">Post By - {blog.by}</span>
                         </div>
                 )
             }
