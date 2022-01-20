@@ -21,7 +21,7 @@ const RateUs = () => {
         formData.append("image",image);
         formData.append("comment",comment);
         
-        fetch('http://localhost:5000/addRating', {
+        fetch('https://serene-coast-79100.herokuapp.com/addRating', {
             method: 'POST',
             body: formData
         })
