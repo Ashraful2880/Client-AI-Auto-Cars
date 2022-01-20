@@ -39,10 +39,7 @@ const ManageOrder = ({allOrder}) => {
     return (
         <div className="row mx-auto py-3 mb-3">
             <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
-                <img className="w-75 rounded-3 single-img" src={url} alt="booked-pic" />
-                <br />
-                <button className="btn mt-3 btn-success border-0 mx-3 px-5">Approve</button>
-                <button onClick={()=>handleDelete(_id)} className="btn mt-3 btn-danger border-0 mx-3 px-5">Delete</button>
+                <img className="w-100 rounded-3 single-img" src={url} alt="booked-pic" />
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 text-start">
                     <div className="w-75 mx-auto" style={orderBoxStyle}>
@@ -59,6 +56,10 @@ const ManageOrder = ({allOrder}) => {
                         <h6 className="text-secondary">Address: {address}</h6>
                         <h6 className="text-secondary">Email: {email}</h6>
                         <h6 className="text-secondary">Cell-Number: {number}</h6>
+                        <div>
+                            <button className="btn my-3 btn-success border-0 me-3 px-5">Approve</button>
+                            <button onClick={()=>handleDelete(_id)} className="btn my-3 btn-danger border-0 px-5">Delete</button>
+                        </div>
                     </div>
                 </div>
         </div>

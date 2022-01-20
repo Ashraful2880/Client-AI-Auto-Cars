@@ -24,9 +24,9 @@ const ManageProduct = ({car}) => {
                 <img className="w-75 rounded-3" src={url} alt="Product_Image" />
             </div>
             <div className="col-sm-12 col-md-12 col-lg-6 text-start border mb-4 mt-2 pt-3">
-                <h4>Brand: <span className="text-danger">{name}</span></h4>
-                <h5>Model: <span className="text-danger">{model}</span></h5>
-                <h5>Model Year: <span className="text-danger">{modelYear}</span></h5>
+                <h5>Brand: <span className="text-success">{name}</span></h5>
+                <h5>Model: {model}</h5>
+                <h5>Model Year: {modelYear}</h5>
                 <h4 className="text-danger">Price: ${price}</h4>
                 <p className="text-secondary">{details}</p>
                 <button className="btn btn-success px-5 mx-2 mb-3">Update</button>
