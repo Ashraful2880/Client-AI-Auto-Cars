@@ -58,7 +58,7 @@ const RateUs = () => {
                             onChange={e=>setImage(e.target.files[0])}
                             type="file" 
                             accept="image/*" 
-                            className="w-100 p-2 mb-2 rounded-3 border-1 my-2"/>
+                            className="w-100 p-2 mb-2 rounded-3 border-1 my-2 custom-file-input"/>
                         <textarea 
                             onChange={e=>setComment(e.target.value)}
                             className="w-100 p-2 mb-2 rounded-3 border-1 my-2" 
