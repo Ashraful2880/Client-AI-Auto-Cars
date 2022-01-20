@@ -2,8 +2,8 @@ import React from 'react';
 import About from '../../About/About';
 import Banner from '../../Banner/Banner';
 import OurBlogs from '../../OurBlogs/OurBlogs';
-import OurSuccess from '../../OurSuccess/OurSuccess';
-import Testomonial from '../../Testomonial/Testomonial';
+import OurSuccess from '../OurSuccess/OurSuccess';
+import Testimonial from '../Testimonial/Testimonial'
 import FeatureCars from '../FeatureCars/FeatureCars';
 import Galary from '../Galary/Galary';
 const Home = () => {
@@ -11,10 +11,10 @@ const Home = () => {
         <div>
             <Banner/>
             <FeatureCars/>
-            <About/>
             <Galary/>
+            <About/>
             <OurSuccess/>
-            <Testomonial/>
+            <Testimonial/>
             <OurBlogs/>
         </div>
     );

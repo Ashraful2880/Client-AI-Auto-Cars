@@ -2,8 +2,11 @@ import React from 'react';
 
 const Galary = () => {
     return (
-        <div>
-            <h2>Our Galary</h2>
+        <div className="">
+            <div>
+                <h2>Our Galary</h2>
+                <h5>View The Product Quality</h5>
+            </div>
         </div>
     );
 };

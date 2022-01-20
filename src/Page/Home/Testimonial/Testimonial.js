@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Rating from 'react-rating';
-import './Testomonial.css';
+import './Testimonial.css';
 
-const Testomonial = () => {
+const Testimonial = () => {
     const[ratings,setRatings]=useState([]);
     useEffect(()=>{
         fetch('https://serene-coast-79100.herokuapp.com/userRating')
@@ -47,4 +47,4 @@ const Testomonial = () => {
     );
 };
 
-export default Testomonial;
+export default Testimonial;

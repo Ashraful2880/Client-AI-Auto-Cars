@@ -1,5 +1,7 @@
 .testimonial-container {
-    background: linear-gradient(#000428, #004683);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.541),rgba(0, 0, 0, 0.603)),url(../../../Image/car.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 .item {
     width: 300px;

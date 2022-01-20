@@ -4,16 +4,14 @@
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    height: 95vh;
+    padding-bottom: 50px;
 }
-/* Chrome, Safari, Edge, Opera */
+/* Code For Remove Arrow Symbol in Number Input  */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
-/* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
 }

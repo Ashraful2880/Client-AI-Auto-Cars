@@ -59,7 +59,7 @@ const Dashboard = () => {
                                 <Link to={ `${url}/myOrders`}><span>My Orders</span></Link>
                             </button>
                             <button className="subMenu btn mt-3 w-100 border-0 rounded-3">
-                                <Link to={ `${url}/userRating`}><span>Rate Us</span></Link>
+                                <Link to={ `${url}/addRating`}><span>Rate Us</span></Link>
                             </button>
                         {admin&& 
                         <>
@@ -97,7 +97,7 @@ const Dashboard = () => {
                         <Route path={`${path}/myOrders`}>
                             <MyOrders/>
                         </Route>
-                        <Route path={`${path}/userRating`}>
+                        <Route path={`${path}/addRating`}>
                             <RateUs/>
                         </Route>
                         <Route path={`${path}/manageOrders`}>
