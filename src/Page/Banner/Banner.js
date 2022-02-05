@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Banner.css';
 
 const Banner = () => {
-
     return (
         <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
             <div className="carousel-inner">
@@ -47,7 +46,7 @@ const Banner = () => {
             <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
-        </div>
+        </div> 
     );
 };
 

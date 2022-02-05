@@ -27,20 +27,11 @@ const Header = () => {
                   <li className="nav-item">
                       <Link className="nav-link text-white fs-5" to="/aboutus"> About Us</Link>
                   </li>
-
-
-                  {user.email?
-                    <li className="nav-item">
-                      <Link className="nav-link text-white fs-5" to="/dashboard"> Dashboard</Link>
-                    </li>
-                    :
-                    <li className="nav-item">
-                      <Link className="nav-link text-white fs-5" to="/signup"> Signup </Link>                      
-                    </li>
-                  }
-
                   {user.email?
                     <ul className="navbar-nav">
+                      <li className="nav-item">
+                        <Link className="nav-link text-white fs-5" to="/dashboard"> Dashboard</Link>
+                      </li>
                       <li className="nav-item">
                         <span className="text-warning fs-6 userName ">{user.displayName}</span>
                         <img className="user-image rounded-circle ms-3 text-light" src={user.photoURL} alt="user-img" />
