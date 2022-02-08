@@ -1,17 +1,23 @@
 .car-container {
-    box-shadow: 10px 10px 20px rgb(228, 228, 228);
+    box-shadow: 5px 10px 20px rgb(228, 228, 228);
 }
-
 .car-image {
     transition: ease-in-out 0.3s
 }
-
 .car-image:hover {
     transform: scale(1.04);
 }
-
-.price-btn {
-    font-weight: 500;
-    border-radius: 20px;
-    letter-spacing: 2px;
+.price{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+.details-area{
+    background-color: black;
+}
+.details-area h6{
+    border-left: 1px solid rgb(206, 3, 3);
+}
+.car-head:hover{
+    color: blue;
 }
