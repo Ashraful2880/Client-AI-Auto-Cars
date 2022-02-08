@@ -19,5 +19,45 @@
     border-left: 1px solid rgb(206, 3, 3);
 }
 .car-head:hover{
-    color: blue;
+    color: red;
+}
+
+/* Style For Pagination */
+
+.paginationBttns {
+    list-style: none;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+.paginationBttns li {
+    margin: 0 4px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: ease-in-out 0.3s;
+}
+.paginationBttns li:hover {
+    background: red;
+    color: #fff;
+    cursor: pointer;
+}
+.paginationBttns li:hover .nextBttn {
+    color: #fff;
+}
+.paginationBttns li:hover .previousBttn {
+    color: #fff;
+}
+.paginationDisabled {
+    color: grey;
+    cursor: default;
+    background: none;
+}
+.paginationActive{
+    background-color: red;
+    color: #fff;
+}
+.previousBttn, .nextBttn{
+    color: red;
+    text-decoration: none;
 }
