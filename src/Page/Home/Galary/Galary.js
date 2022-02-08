@@ -2,12 +2,6 @@ import React from 'react';
 import Slider from "react-slick";
 import './Galary.css';
 
-import slider1 from '../../../Image/galary/galary1.jpg'
-import slider2 from '../../../Image/galary/galary2.jpg'
-import slider3 from '../../../Image/galary/galary3.jpg'
-import slider4 from '../../../Image/galary/galary4.jpg'
-import slider5 from '../../../Image/galary/galary6.jpg'
-
 const Galary = () => {
     var settings = {
         dots: true,
@@ -53,34 +47,34 @@ const Galary = () => {
             <div className="pb-5 pt-3">
                 <Slider {...settings}>
                     <div>
-                        <img src={slider1} alt="Galary-1" />
+                        <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
                     </div>
                     <div>
-                        <img src={slider2} alt="Galary-1" />
+                        <img src="https://i.ibb.co/KLVRFvk/galary2.jpg" alt="Galary-1" />
                     </div>
                     <div>
-                        <img src={slider3} alt="Galary-1" />
+                        <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
                     </div>
                     <div>
-                        <img src={slider4} alt="Galary-1" />
+                        <img src="https://i.ibb.co/MnkLgVX/galary4.jpg" alt="Galary-1" />
                     </div>
                     <div>
-                        <img src={slider5} alt="Galary-1" />
+                        <img src="https://i.ibb.co/VSL0TgH/galary6.jpg" alt="Galary-1" />
                     </div>
                     <div>
-                        <img src={slider1} alt="Galary-1" />
+                        <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
                     </div>
                     <div>
-                        <img src={slider2} alt="Galary-1" />
+                        <img src="https://i.ibb.co/KLVRFvk/galary2.jpg" alt="Galary-1" />
                     </div>
                     <div>
-                        <img src={slider3} alt="Galary-1" />
+                        <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
                     </div>
                     <div>
-                        <img src={slider4} alt="Galary-1" />
+                        <img src="https://i.ibb.co/MnkLgVX/galary4.jpg" alt="Galary-1" />
                     </div>
                     <div>
-                        <img src={slider5} alt="Galary-1" />
+                        <img src="https://i.ibb.co/VSL0TgH/galary6.jpg" alt="Galary-1" />
                     </div>
                 </Slider>
             </div>
