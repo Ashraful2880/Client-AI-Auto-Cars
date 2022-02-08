@@ -1,6 +1,8 @@
 import React from 'react';
 import aboutCar from '../../Image/regFeature.jpg';
 import './About.css';
+import photo from '../../Image/key Features.jpg'
+
 const About = () => {
     return (
         <>
@@ -9,8 +11,7 @@ const About = () => {
                     <h2>Who We Are</h2>
                     <h5>Few Words About Us</h5>
                 </div>
-                <div className="col-sm-12 col-md-12 col-lg-6 mx-auto" data-aos="fade-down"
-     data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div className="col-sm-12 col-md-12 col-lg-6 mx-auto" data-aos="fade-down"     data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <img className="p-5 w-100" src={aboutCar} alt="aboutImage" />
                 </div>
                 <div className="col-sm-12 col-md-12 col-lg-6 about-text text-start"  data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -107,6 +108,35 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="container row mx-auto my-5">
+                <div className="col-lg-6 col-md-6 col-sm-12 text-start">
+                    <p className="mb-5 text-secondary">Vel tincidunt nisi vulputate quis nunc et feugiat diam, nulla mauris ac erat, hendrerit et feugiat et, gravida vel massa morbi sit amet sollicitudin nulla phasellus vitae ante purus. Porttitor ligula viverra sem tristique ullamcorper. eu vitae risus. Suspendisse aliquam. volutpat augue, eu porta nibh sagittis</p>
+                    <div className="d-flex">
+                        <i className="fas fa-chart-line text-danger fs-2"></i>
+                        <div className="ms-5">
+                            <h3>10 YEARS REPUTATION</h3>
+                            <p className="text-secondary"> Massa morbi sit amet sollicitudin nulla phasellus vitae ante purus. Porttitor ligula viverra sem tristique ullamcorper.</p>
+                        </div>
+                    </div>
+                    <div className="d-flex">
+                        <i className="fab fa-accessible-icon text-danger fs-2"></i>
+                        <div className="ms-5">
+                            <h3>FULL INTEGRITY</h3>
+                            <p className="text-secondary"> Massa morbi sit amet sollicitudin nulla phasellus vitae ante purus. Porttitor ligula viverra sem tristique ullamcorper.</p>
+                        </div>
+                    </div>
+                    <div className="d-flex">
+                        <i className="fas fa-headset text-danger fs-2"></i>
+                        <div className="ms-5">
+                            <h3>GREAT SUPPORT</h3>
+                            <p className="text-secondary"> Massa morbi sit amet sollicitudin nulla phasellus vitae ante purus. Porttitor ligula viverra sem tristique ullamcorper.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                    <img className="w-100 rounded-3" src={photo} alt="Feature Area" />
                 </div>
             </div>
         </>
