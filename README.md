@@ -4,7 +4,7 @@
 
 ### About This Project.
 
-**Name-AI-Auto-Cars**
+**Name-Mr. Automotive**
 
 **Type-Full Stack Car Sales Website**
 
@@ -22,6 +22,7 @@
 * Node JS.
 * Express JS.
 * Mongo DB
+* Deployed On Heroku.
 
 ### Features.
 
@@ -29,8 +30,9 @@
 * Admin Can Delete, Update, Manage Products.
 * Admin Can Add New Products.
 * Admin Can Make Admin Also.
-* Users Can Registration With Email & Password.
-* Users Can Also Log in With Google Sign In.
+* Users Can Registration With Email.
+* Users Can Login with Email & Password
+* Users Can Also Log in With Google.
 * Users can Manage,Delete Their Orders.
 * Users Can Also Give Feedback & It Show in the Home Page With Star.
 * Responsive With Mobile,Tablet & Laptop.
