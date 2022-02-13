@@ -39,6 +39,7 @@
 /* Media Query For Mobile Device */
 
 @media only screen and (max-width:480px){
+    
     .caption-text{
         position: absolute;
         top: 52%;
@@ -46,6 +47,10 @@
     }
     .caption-text h1{
         font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .caption-text h2{
+        font-size: 14px;
         margin-bottom: 30px;
     }
     .caption-text p{
