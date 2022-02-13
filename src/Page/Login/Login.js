@@ -10,7 +10,8 @@ const Login = () => {
         <div className="mt-5 mx-auto">
             <div className="rounded-3 login-text mx-auto login-container">
                 <div className="mx-auto col-lg-4 col-md-6 col-sm-12">
-                    <h2 className="fw-bold pt-5 text-light">Please Login</h2>
+                    <h3 className="fw-bold pt-5 text-light">Welcome Back!</h3>
+                    <h2 className="fw-bold text-light">Please Login</h2>
                     <h4 className="text-danger fw-bold fst-italic mb-4">Mr Automative</h4>
                     <form onSubmit={handleSignIn}>
                         <div>
@@ -25,7 +26,7 @@ const Login = () => {
                         </div>
                         <div className="mx-auto">
                             <h5 className="text-light py-3">New User? 
-                                <Link className="text-danger fw-bold" to="/signup">Please Register</Link>
+                                <Link className="text-danger fw-bold" to="/signup"> Please Register</Link>
                             </h5>
                         </div>
                     </form>

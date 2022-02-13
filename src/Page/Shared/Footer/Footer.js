@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './footer.css';
-import mainLogo from '../../../Image/Main-Logo.png'
 
 const Footer = () => {
     return (
@@ -9,9 +8,8 @@ const Footer = () => {
             <div className="row container mx-auto">
                 <div className="col-lg-3 col-md-6 col-sm-12 text-start text-white">
                     <Link className="text-decoration-none" to="/home">
-                        <img className="w-100" src={mainLogo} alt="Main Logo" />
+                        <h2 className="text-danger fst-italic mb-3">Mr. Automative</h2>
                     </Link>
-                    <h5 className="text-danger fst-italic">Mr. Automative</h5>
                     <p>Company of Cars also celebrates the diversity of our community. We strive to be good corporate citizens and give back wherever we can. We recognize the multiplicity of ethnic backgrounds that make up the fabric of Canadian society</p>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-6 text-start text-white">
@@ -40,9 +38,9 @@ const Footer = () => {
                 </div>
                 <hr className="text-white" />
                 <div className="social-area mb-4">
-                    <i className="text-white bg-primary mx-1 rounded-circle fs-5 fab fa-facebook"> </i>
-                    <i className="text-white bg-primary mx-1 rounded-circle fs-5 fab fa-twitter"> </i>
-                    <i className="text-white bg-primary mx-1 rounded-circle fs-5 fab fa-instagram"> </i>
+                    <i className="text-white bg-danger mx-1 rounded-circle fs-5 fab fa-facebook"> </i>
+                    <i className="text-white bg-danger mx-1 rounded-circle fs-5 fab fa-twitter"> </i>
+                    <i className="text-white bg-danger mx-1 rounded-circle fs-5 fab fa-instagram"> </i>
                 </div>
                 <hr className="text-white" />
             </div>

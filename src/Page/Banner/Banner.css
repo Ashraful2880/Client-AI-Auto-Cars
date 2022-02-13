@@ -19,8 +19,12 @@
 }
 .caption-text h1{
     font-size: 60px;
+    color: orange;
+}
+.caption-text h2{
     margin-bottom: 40px;
     color: orange;
+    letter-spacing: 5px;
 }
 .caption-text p{
  color: rgb(200, 200, 200);
@@ -63,9 +67,9 @@
     display: none;
     }
 }
-@media only screen and (max-width: 1025px) and (min-width: 769px){
+@media only screen and (max-width: 1062px) and (min-width: 769px){
     .caption-text h1{
-        font-size: 45px;
+        font-size: 35px;
         margin-bottom: 15px;
     }
     .caption-text p{

@@ -17,7 +17,7 @@ const Explore = () => {
     return (
         <div>
             <h2 className="text-danger pt-4 fw-bold"> Awesome Car Collections </h2>
-            <p className="mb-5 text-secondary fw-bold"> We are The Leading Auto Car Company With <br /> The World-Wide Reputation </p>
+            <p className="mb-5 text-secondary fw-bold fs-5"> We are The Leading Auto Car Company With <br /> The World-Wide Reputation </p>
             <div  className="container row mx-auto mb-4">
                 {
                 cars.slice(pagesVisited, pagesVisited+carPerPage).map((car)=><Car key={car._id} car={car}/>)

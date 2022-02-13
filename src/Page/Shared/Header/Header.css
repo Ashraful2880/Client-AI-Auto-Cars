@@ -1,5 +1,5 @@
 .bg{
-    background-color: navy;
+    background-color: black;
     border-bottom: 1px solid rgb(185, 121, 3);
 }
 .user-image {
@@ -16,9 +16,9 @@
 }
 .nav-link:hover{
     transition: ease-in-out 0.4s;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid orange;
 }
 .nav-link:focus{
-    color: rgb(177, 177, 177)!important;
-    border-bottom: 2px solid #fff;
+    color: orange!important;
+    border-bottom: 2px solid orange;
 }

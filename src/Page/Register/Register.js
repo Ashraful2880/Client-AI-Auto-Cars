@@ -13,7 +13,7 @@ const Register = () => {
             <div className="rounded-3 reg-area mx-auto">
                 <div className="mx-auto col-lg-4 col-md-6 col-sm-12">
                     <h2 className="text-light pt-5">Please Signup</h2>
-                    <h3 className="text-danger fst-italic mb-5">AI Auto Cars</h3>
+                    <h3 className="text-danger fst-italic mb-5">Mr. Automotive</h3>
                     <form onSubmit={handleRegister}>
                         {user.email?history.push('/explore'):''}
                         {user.email?setError(''): <span className="text-warning">{error}</span> }
@@ -27,15 +27,15 @@ const Register = () => {
                             <input onBlur={handlePassword}className="reg-input w-100 p-3 my-3 rounded-3" type="password" placeholder= " Your Password" required  />
                         </div>
                         <div>
-                            <input className="w-100 py-3 mb-4 btn btn-danger rounded-3" type="submit" value="Register" />
+                            <input className="w-100 py-3 mb-4 btn btn-danger rounded-3 fs-5" type="submit" value="Register" />
                         </div>
                         <div>
-                            <h5 className="text-light">Already Registerd? <Link className="text-danger" to="/signin">Login Here</Link></h5>
+                            <h5 className="text-light">Already Registerd? <Link className="text-danger" to="/signin"> Login Here</Link></h5>
                             <p className="fw-bold text-light">Or</p>
                         </div>
                     </form>
                         <div className="mx-auto pb-5">
-                            <button onClick={googleSignIn} className=" border social-sign-button border border-danger border-2">
+                            <button onClick={googleSignIn} className=" border social-sign-button border border-dange border-2">
                                 <img className="w-100" src={google} alt="googleImage" />
                             </button>
                             <button onClick={gitHubSignIn} className=" border social-sign-button border border-danger border-2" >

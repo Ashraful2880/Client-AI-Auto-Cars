@@ -3,12 +3,12 @@ import Slider from "react-slick";
 import './Galary.css';
 
 const Galary = () => {
-    var settings = {
+    let settings = {
         dots: true,
         autoplay: true,
         infinite: true,
-        speed: 500,
-        slidesToShow: 4,
+        speed: 1000,
+        slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,
         responsive: [
@@ -39,44 +39,46 @@ const Galary = () => {
           ]
       };
     return (
-        <div className="container-fluid galary-container testimonial-container">
-            <div className="text-light mb-5">
-                <h2>Our Galary</h2>
-                <h5>View The Product Quality</h5>
-            </div>
-            <div className="pb-5 pt-3">
-                <Slider {...settings}>
-                    <div>
-                        <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
-                    </div>
-                    <div>
-                        <img src="https://i.ibb.co/KLVRFvk/galary2.jpg" alt="Galary-1" />
-                    </div>
-                    <div>
-                        <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
-                    </div>
-                    <div>
-                        <img src="https://i.ibb.co/MnkLgVX/galary4.jpg" alt="Galary-1" />
-                    </div>
-                    <div>
-                        <img src="https://i.ibb.co/VSL0TgH/galary6.jpg" alt="Galary-1" />
-                    </div>
-                    <div>
-                        <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
-                    </div>
-                    <div>
-                        <img src="https://i.ibb.co/KLVRFvk/galary2.jpg" alt="Galary-1" />
-                    </div>
-                    <div>
-                        <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
-                    </div>
-                    <div>
-                        <img src="https://i.ibb.co/MnkLgVX/galary4.jpg" alt="Galary-1" />
-                    </div>
-                    <div>
-                        <img src="https://i.ibb.co/VSL0TgH/galary6.jpg" alt="Galary-1" />
-                    </div>
-                </Slider>
+        <div className="galary-container testimonial-container">
+          <div className="container">
+            <div className="text-light mb-5 pt-5">
+                    <h2>Our Galary</h2>
+                    <h5>View The Product Quality</h5>
+                </div>
+                <div className="pb-5 pt-3">
+                    <Slider {...settings}>
+                        <div className="px-2">
+                            <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
+                        </div>
+                        <div className="px-2">
+                            <img src="https://i.ibb.co/KLVRFvk/galary2.jpg" alt="Galary-1" />
+                        </div>
+                        <div className="px-2">
+                            <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
+                        </div>
+                        <div className="px-2">
+                            <img src="https://i.ibb.co/MnkLgVX/galary4.jpg" alt="Galary-1" />
+                        </div>
+                        <div className="px-2">
+                            <img src="https://i.ibb.co/VSL0TgH/galary6.jpg" alt="Galary-1" />
+                        </div>
+                        <div className="px-2">
+                            <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
+                        </div>
+                        <div className="px-2">
+                            <img src="https://i.ibb.co/KLVRFvk/galary2.jpg" alt="Galary-1" />
+                        </div>
+                        <div className="px-2">
+                            <img src="https://i.ibb.co/80HZQ06/galary1.jpg" alt="Galary-1" />
+                        </div>
+                        <div className="px-2">
+                            <img src="https://i.ibb.co/MnkLgVX/galary4.jpg" alt="Galary-1" />
+                        </div>
+                        <div className="px-2">
+                            <img src="https://i.ibb.co/VSL0TgH/galary6.jpg" alt="Galary-1" />
+                        </div>
+                    </Slider>
+                </div>
             </div>
         </div>
     );
