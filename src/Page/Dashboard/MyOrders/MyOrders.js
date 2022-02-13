@@ -16,7 +16,7 @@ const MyOrders = () => {
     },[user]);
     return (
         <div className="myOrder-container text-light">
-            <h2 className="pt-4">My All Orders</h2>
+            <h2 className="pt-4">Your All Orders</h2>
             <h4 className="pb-4">Current Orders: <span className="text-danger">{orders.length}</span> </h4>
         {
             orders.map(order=><MyOrder key={order._id} order={order}/>)

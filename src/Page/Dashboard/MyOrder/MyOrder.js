@@ -24,15 +24,18 @@ const MyOrder = ({order}) => {
     };
 
     return (
-        <div className="row container mx-auto py-3">
+        <div className="row container mx-auto py-3 border rounded-3">
             <div className="col-lg-6 col-md-12 col-sm-12 mb-3">
-                <img className="w-75 single-img" src={url} alt="booked-pic" />
+                <img className="w-50 single-img" src={url} alt="booked-pic" />
             </div>
             <div className="col-lg-6 col-md-12 col-sm-12 text-start px-5 pt-3">
                 <h3 className="text-danger">{name}- ({model})</h3>
                 <p className="text-light"> {details}</p>
-                <h4 className="text-light">Price: <span className="text-danger">${price}</span></h4>
-                <button onClick={()=>handleDelete (_id)} className="btn btn-danger mt-3 py-2">Delete Order</button>
+                <div className="d-flex justify-content-between align-items-center myBtn">
+                    <h4 className="text-light">Price: <span className="text-danger">${price}</span></h4>
+                    <button className="btn btn-success py-2">Process To Pay</button>
+                    <button onClick={()=>handleDelete (_id)} className="btn btn-danger py-2">Delete Order</button>
+                </div>
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ import ManageProduct from '../ManageProduct/ManageProduct';
 const ManageProducts = () => {
     const [cars]=useServices();
     return (
-        <>
+        <div className="">
             <h3 className="pt-4 fw-bold">Update Products Here</h3>
             <h4 className="mb-5">Total Products -
                 <span className="text-danger">{cars.length}</span>
@@ -16,7 +16,7 @@ const ManageProducts = () => {
                     cars.map(car=><ManageProduct key={car._id} car={car}/>)
                 }
             </div>
-        </>
+        </div>
     );
 };
 

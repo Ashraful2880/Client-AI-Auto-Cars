@@ -34,7 +34,7 @@ const Header = () => {
                       </li>
                       <li className="nav-item">
                         <span className="text-warning fs-6 userName ">{user.displayName}</span>
-                        <img className="user-image rounded-circle ms-3 text-light" src={user.photoURL} alt="user-img" />
+                        <img className="user-image rounded-circle ms-3 text-light border" src={user.photoURL} alt="user-img" />
                       </li>
                       <li className="nav-item">
                         <Link onClick={handleSignOut} className="nav-link text-white fs-5" to="/home"><i className="fas fa-sign-out-alt"></i></Link>

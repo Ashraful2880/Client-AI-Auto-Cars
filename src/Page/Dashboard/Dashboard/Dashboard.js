@@ -41,48 +41,65 @@ const Dashboard = () => {
             <div className="row mx-auto" >
                 <div className="col-md-12 col-lg-2 col-sm-12 px-0" id="toogleDiv">
                     <div className="card leftCard h-100 w-100 border-0 px-3">
-                        <div className="d-flex flex-row align-items-center">
-                            <img className="rounded-circle h-50 text-light ms-5" src={user?.photoURL} alt="User-Profile"/>
+                        <div className="d-flex flex-row align-items-center justify-content-center mt-4">
+                            <img className="rounded-circle h-50 text-light ms-5 border border-danger" src={user?.photoURL} alt="User-Profile"/>
                             <span className="text-light ms-5 fs-5">{user?.displayName}</span>
                         </div>
                         <hr className="text-light"/>
-
                         <div className="d-flex flex-column align-items-center me-3">
-                            <button className="w-100 border-0 rounded-3 btn subMenu">
-                                <Link to={ `${url}`}><span>Dashboard</span></Link>
-                            </button>
-                            <button className="subMenu btn mt-3 w-100 border-0 rounded-3">
-                                <Link to={ `${url}/payment`}><span>Pay</span></Link>
-                            </button>
-                            <button className="subMenu btn mt-3 w-100 border-0 rounded-3">
-                                <i className="fas fa-shopping-cart text-light"></i>
-                                <Link to={ `${url}/myOrders`}><span>My Orders</span></Link>
-                            </button>
-                            <button className="subMenu btn mt-3 w-100 border-0 rounded-3">
-                                <Link to={ `${url}/addRating`}><span>Rate Us</span></Link>
-                            </button>
+                            <Link to={`${url}`} className="w-100 border-0 rounded-3 btn subMenu">
+                                <button className="w-100 border-0 rounded-3 btn text-light">
+                                    Dashboard
+                                </button>
+                            </Link>
+                            <Link to={`${url}/payment`} className="w-100 border-0 rounded-3 btn subMenu">
+                                <button className="w-100 border-0 rounded-3 btn text-light">
+                                    Make Payment
+                                </button>
+                            </Link>
+                            <Link to={`${url}/myOrders`} className="w-100 border-0 rounded-3 btn subMenu">
+                                <button className="w-100 border-0 rounded-3 btn text-light">
+                                    My Orders
+                                </button>
+                            </Link>
+                            <Link to={`${url}/addRating`}className="w-100 border-0 rounded-3 btn subMenu">
+                                <button className="w-100 border-0 rounded-3 btn text-light">
+                                    Rate Us
+                                </button>
+                            </Link>
                         {admin&& 
                         <>
-                            <button className="subMenu btn mt-3 w-100 border-0 rounded-3">
-                                <Link to={ `${url}/manageOrders`}><span>Manage Orders</span></Link>
-                            </button>
-                            <button className="subMenu btn mt-3 w-100 border-0 rounded-3">
-                                <Link to={ `${url}/addProducts`}><span>Add Product</span></Link>
-                            </button>
-                            <button className="subMenu btn mt-3 w-100 border-0 rounded-3">
-                                <Link to={ `${url}/manageProducts`}><span>Manage Product</span></Link>
-                            </button>
-                            <button className="subMenu btn mt-3 w-100 border-0 rounded-3">
-                                <Link to={ `${url}/makeAdmin`}><span>Make Admin</span></Link>
-                            </button>
+                            <Link to={`${url}/manageOrders`} className="w-100 border-0 rounded-3 btn subMenu">
+                                    <button className="w-100 border-0 rounded-3 btn text-light">
+                                        Manage Orders
+                                    </button>
+                            </Link>
+                            <Link to={`${url}/addProducts`} className="w-100 border-0 rounded-3 btn subMenu">
+                                    <button className="w-100 border-0 rounded-3 btn text-light">
+                                        Add product
+                                    </button>
+                            </Link>
+                            <Link to={`${url}/manageProducts`}className="w-100 border-0 rounded-3 btn subMenu">
+                                    <button className="w-100 border-0 rounded-3 btn text-light">
+                                        Manage Product
+                                    </button>
+                            </Link>
+
+
+
+
+                            <Link to={ `${url}/makeAdmin`} className="w-100 border-0 rounded-3 btn subMenu">
+                                    <button className="w-100 border-0 rounded-3 btn text-light">
+                                        Make Admin
+                                    </button>
+                            </Link>
                         </>
                         }
-                            <span className="mt-4 text-secondary">Others</span>
-                            <button className="subMenu btn mt-3 w-100 border-0 rounded-3">
-                                <Link onClick={handleSignOut} className="nav-link text-white fs-5" to="/home">
-                                    <span>Logout</span>
-                                </Link>
-                            </button>
+                            <Link onClick={handleSignOut} to="/home" className="w-100 border-0 rounded-3 btn subMenu">
+                                    <button className="w-100 border-0 rounded-3 btn text-light">
+                                        Log Out
+                                    </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

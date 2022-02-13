@@ -5,6 +5,7 @@
     background-attachment: fixed;
     background-size: cover;
     padding-bottom: 50px;
+    height: 100vh;
 }
 /* Code For Remove Arrow Symbol in Number Input  */
 input::-webkit-outer-spin-button,

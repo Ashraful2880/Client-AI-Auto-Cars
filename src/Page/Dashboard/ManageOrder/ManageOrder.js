@@ -30,32 +30,24 @@ const ManageOrder = ({allOrder}) => {
         }
     };
     //<---------------- Style for Order details Box --------------->
-    const orderBoxStyle={
-        boxShadow:'10px 10px 30px #dfdfdf',
-        padding:'10px 0px 10px 20px',
-        marginTop:'20px',
-        borderRadius:'10px'
-    }
+  
     return (
-        <div className="row mx-auto py-3 mb-3">
+        <div className="container-fluid row mx-auto py-1 mb-3">
             <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
-                <img className="w-100 rounded-3 single-img" src={url} alt="booked-pic" />
+                <img className="w-50 rounded-3 single-img py-3" src={url} alt="booked-pic" />
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 text-start">
-                    <div className="w-75 mx-auto" style={orderBoxStyle}>
-                        <h3 className="fw-bold">Car Details</h3>
-                        <h5>Car Brand: {name}</h5>
-                        <h6 className="text-secondary">Model: {model}</h6>
-                        <h6 className="text-secondary">Color: {color}</h6>
+            <div className="col-lg-6 col-md-6 col-sm-12 text-start text-light border rounded-3 py-3">
+                    <div className="w-75 mx-auto">
+                        <h3>Car Brand: {name}</h3>
+                        <h5>Model: {model} ( {color})</h5>
                         <h5 className="text-danger">Price: {price}$</h5>
                     </div>
-                    <div className="w-75 mx-auto" style={orderBoxStyle}>
-                        <h3 className="fw-bold">Customer Details</h3>
+                    <div className="w-75 mx-auto">
                         <hr className="w-75"/>
-                        <h5 className="text-secondary">Booked By: {userName}</h5>
-                        <h6 className="text-secondary">Address: {address}</h6>
-                        <h6 className="text-secondary">Email: {email}</h6>
-                        <h6 className="text-secondary">Cell-Number: {number}</h6>
+                        <h3>Booked By: {userName}</h3>
+                        <h5>Address: {address}</h5>
+                        <h5>Email: {email}</h5>
+                        <h5>Cell-Number: {number}</h5>
                         <div>
                             <button className="btn my-3 btn-success border-0 me-3 px-5">Approve</button>
                             <button onClick={()=>handleDelete(_id)} className="btn my-3 btn-danger border-0 px-5">Delete</button>
