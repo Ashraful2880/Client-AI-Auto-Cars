@@ -17,7 +17,7 @@ const FeatureCars = () => {
             <div  className="container row mx-auto mb-4">
                 {
                 cars.slice(0,visible).map(car=>
-                    <div className="col-md-6 col-sm-12 col-lg-4 mx-auto position-relative text-start mb-4 car-container rounded-3" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <div key={car._id} className="col-md-6 col-sm-12 col-lg-4 mx-auto position-relative text-start mb-4 car-container rounded-3" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <Link className="text-dark text-decoration-none" to={`/purchase/${car._id}`} >
                             <img className="w-100 border rounded-3 car-image position-relative" src={car.url} alt="Car-Imag"/>
                         </Link>

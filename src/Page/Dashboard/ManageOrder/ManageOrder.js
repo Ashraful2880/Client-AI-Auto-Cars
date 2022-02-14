@@ -2,7 +2,6 @@ import React from 'react';
 import Swal from 'sweetalert2';
 
 const ManageOrder = ({allOrder}) => {
-    console.log(allOrder);
     const {url,name,model,_id,price,address,color,email,number,userName}=allOrder;
 
     //<-------------- Delete Data By Click ------------>
