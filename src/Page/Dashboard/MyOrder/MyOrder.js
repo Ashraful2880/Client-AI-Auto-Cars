@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2'
 import useAuth from '../../../Hooks/UseAuth';
 import './MyOrder.css';
 
@@ -9,6 +10,7 @@ const MyOrder = ({order}) => {
     //<-------------- Delete an Order By User ------------>
 
     const handleDelete=(id)=>{
+        
         const proceed=window.confirm("Are You Sure ? Want To Delete ?");
         if (proceed){
             const url=`https://serene-coast-79100.herokuapp.com/deleteOrder/${id}`;
@@ -18,7 +20,28 @@ const MyOrder = ({order}) => {
             .then(res=>res.json())
             .then(data=>{
                 if(data.deletedCount>0){
-                    window.alert('Deleted Successfully')
+                    let timerInterval
+                    Swal.fire({
+                      title: 'Auto close alert!',
+                      html: 'I will close in <b></b> milliseconds.',
+                      timer: 2000,
+                      timerProgressBar: true,
+                      didOpen: () => {
+                        Swal.showLoading()
+                        const b = Swal.getHtmlContainer().querySelector('b')
+                        timerInterval = setInterval(() => {
+                          b.textContent = Swal.getTimerLeft()
+                        }, 100)
+                      },
+                      willClose: () => {
+                        clearInterval(timerInterval)
+                      }
+                    }).then((result) => {
+                      /* Read more about handling dismissals below */
+                      if (result.dismiss === Swal.DismissReason.timer) {
+                        console.log('Deleting')
+                      }
+                    })
                 }
                 window.location.reload(false);
         });
@@ -50,7 +73,7 @@ const MyOrder = ({order}) => {
     }
 
     return (
-        <div className="row container mx-auto py-3 border rounded-3">
+        <div className="row container mx-auto py-3 border rounded-3 mb-4">
             <div className="col-lg-6 col-md-12 col-sm-12 mb-3">
                 <img className="w-50 single-img" src={url} alt="booked-pic" />
             </div>
@@ -59,7 +82,7 @@ const MyOrder = ({order}) => {
                 <p className="text-light"> {details}</p>
                 <div className="d-flex justify-content-between align-items-center myBtn">
                     <h4 className="text-light">Price: <span className="text-danger">${price}</span></h4>
-                    <button onClick={purchase} className="btn btn-success py-2">Process To Pay</button>
+                    <button onClick={purchase} className="btn btn-success py-2">Procced To Pay</button>
                     <button onClick={()=>handleDelete (_id)} className="btn btn-danger py-2">Delete Order</button>
                 </div>
             </div>

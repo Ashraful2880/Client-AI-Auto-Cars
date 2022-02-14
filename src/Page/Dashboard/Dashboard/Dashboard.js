@@ -10,7 +10,6 @@ import ManageOrders from '../ManageOrders/ManageOrders';
 import ManageProducts from '../ManageProducts/ManageProducts';
 import Success from '../MyOrder/Success';
 import MyOrders from '../MyOrders/MyOrders';
-import Payment from '../Payment/Payment';
 import RateUs from '../RateUs/RateUs';
 import './Dashboard.css';
 
@@ -51,11 +50,6 @@ const Dashboard = () => {
                             <Link to={`${url}`} className="w-100 border-0 rounded-3 btn subMenu">
                                 <button className="w-100 border-0 rounded-3 btn text-light">
                                     Dashboard
-                                </button>
-                            </Link>
-                            <Link to={`${url}/payment`} className="w-100 border-0 rounded-3 btn subMenu">
-                                <button className="w-100 border-0 rounded-3 btn text-light">
-                                    Make Payment
                                 </button>
                             </Link>
                             <Link to={`${url}/myOrders`} className="w-100 border-0 rounded-3 btn subMenu">
@@ -104,9 +98,6 @@ const Dashboard = () => {
                     <Switch>
                         <Route exact path={path}>
                             <DashboardHome/>
-                        </Route>
-                        <Route path={`${path}/payment`}>
-                            <Payment/>
                         </Route>
                         <Route path={`${path}/myOrders`}>
                             <MyOrders/>

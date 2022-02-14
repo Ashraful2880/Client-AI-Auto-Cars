@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 import bg from '../../../Image/car-2.png';
 
 const bgStyle={
@@ -30,7 +31,13 @@ const MakeAdmin = () => {
         .then(result=>{
             console.log(result);
             if(result.acknowledged){
-                alert("Successfully MAke Successfull");
+                Swal.fire({
+                    position: 'center-center',
+                    icon: 'success',
+                    title: 'Admin Added Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
                 setAdminEmail('');
             }
         })

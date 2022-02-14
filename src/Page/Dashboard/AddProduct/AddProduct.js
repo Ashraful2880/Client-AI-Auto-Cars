@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 import './AddProduct.css';
 
 const AddProduct = () => {
@@ -16,7 +17,13 @@ const AddProduct = () => {
         .then(res=>res.json())
         .then(result=>{
             if(result.acknowledged){
-                alert("Car Added Successfully");
+                Swal.fire({
+                    position: 'center-center',
+                    icon: 'success',
+                    title: 'Car Added Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
                 reset();
             }
         })

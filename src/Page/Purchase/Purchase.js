@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef } from 'react';
+import Swal from 'sweetalert2'
 import { useParams } from 'react-router';
 import useAuth from '../../Hooks/UseAuth';
 import './Purchase.css';
@@ -45,7 +46,13 @@ const Purchase = () => {
         .then(res=>res.json())
         .then(result=>{
             if(result.acknowledged){
-                window.alert("Congratulations !!! Your Order Done");
+                Swal.fire({
+                    position: 'center-center',
+                    icon: 'success',
+                    title: 'Successfully Placed Order',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
             };
         });
     };
