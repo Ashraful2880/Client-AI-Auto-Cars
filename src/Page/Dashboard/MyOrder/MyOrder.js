@@ -59,7 +59,7 @@ const MyOrder = ({order}) => {
             product_image: url,
             total_amount: parseInt(price),
         }
-        fetch(`http://localhost:5000/init`,{
+        fetch(`https://serene-coast-79100.herokuapp.com/init`,{
             method:'POST',
             headers:{
                 "content-type":"application/json"
