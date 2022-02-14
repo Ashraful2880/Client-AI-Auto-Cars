@@ -8,7 +8,6 @@ import DashboardHome from '../DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import ManageOrders from '../ManageOrders/ManageOrders';
 import ManageProducts from '../ManageProducts/ManageProducts';
-import Success from '../MyOrder/Success';
 import MyOrders from '../MyOrders/MyOrders';
 import RateUs from '../RateUs/RateUs';
 import './Dashboard.css';
@@ -116,9 +115,6 @@ const Dashboard = () => {
                         </Route>
                         <Route path={`${path}/makeAdmin`}>
                             <MakeAdmin/>
-                        </Route>
-                        <Route path={`${path}/success`}>
-                            <Success/>
                         </Route>
                     </Switch>
                 </div>

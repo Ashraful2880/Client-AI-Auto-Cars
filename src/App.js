@@ -16,6 +16,7 @@ import ManageOrders from './Page/Dashboard/ManageOrders/ManageOrders';
 import MyOrders from './Page/Dashboard/MyOrders/MyOrders';
 import RateUs from './Page/Dashboard/RateUs/RateUs';
 import Home from './Page/Home/Home/Home';
+import Success from './Page/Dashboard/MyOrder/Success';
 
 function App() {
   return (
@@ -56,6 +57,9 @@ function App() {
               </Route>    
               <Route path='/signin'>
                 <Login/>
+              </Route>    
+              <Route path='/success'>
+                <Success/>
               </Route>    
               <Route path='*'>
                 <Error/>
