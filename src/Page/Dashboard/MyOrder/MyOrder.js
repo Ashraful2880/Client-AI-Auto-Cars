@@ -3,73 +3,73 @@ import Swal from 'sweetalert2'
 import useAuth from '../../../Hooks/UseAuth';
 import './MyOrder.css';
 
-const MyOrder = ({order}) => {
-    const {name,url,model, details,price,_id}=order;
-    const {user}=useAuth();
+const MyOrder = ({ order }) => {
+    const { name, url, model, details, price, _id } = order;
+    const { user } = useAuth();
 
     //<-------------- Delete an Order By User ------------>
 
-    const handleDelete=(id)=>{
-        
-        const proceed=window.confirm("Are You Sure ? Want To Delete ?");
-        if (proceed){
-            const url=`https://serene-coast-79100.herokuapp.com/deleteOrder/${id}`;
-            fetch(url,{
-                method:'DELETE'
+    const handleDelete = (id) => {
+
+        const proceed = window.confirm("Are You Sure ? Want To Delete ?");
+        if (proceed) {
+            const url = `${process.env.REACT_APP_API_KEY}/deleteOrder/${id}`;
+            fetch(url, {
+                method: 'DELETE'
             })
-            .then(res=>res.json())
-            .then(data=>{
-                if(data.deletedCount>0){
-                    let timerInterval
-                    Swal.fire({
-                      title: 'Auto close alert!',
-                      html: 'I will close in <b></b> milliseconds.',
-                      timer: 2000,
-                      timerProgressBar: true,
-                      didOpen: () => {
-                        Swal.showLoading()
-                        const b = Swal.getHtmlContainer().querySelector('b')
-                        timerInterval = setInterval(() => {
-                          b.textContent = Swal.getTimerLeft()
-                        }, 100)
-                      },
-                      willClose: () => {
-                        clearInterval(timerInterval)
-                      }
-                    }).then((result) => {
-                      /* Read more about handling dismissals below */
-                      if (result.dismiss === Swal.DismissReason.timer) {
-                        console.log('Deleting')
-                      }
-                    })
-                }
-                window.location.reload(false);
-        });
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        let timerInterval
+                        Swal.fire({
+                            title: 'Auto close alert!',
+                            html: 'I will close in <b></b> milliseconds.',
+                            timer: 2000,
+                            timerProgressBar: true,
+                            didOpen: () => {
+                                Swal.showLoading()
+                                const b = Swal.getHtmlContainer().querySelector('b')
+                                timerInterval = setInterval(() => {
+                                    b.textContent = Swal.getTimerLeft()
+                                }, 100)
+                            },
+                            willClose: () => {
+                                clearInterval(timerInterval)
+                            }
+                        }).then((result) => {
+                            /* Read more about handling dismissals below */
+                            if (result.dismiss === Swal.DismissReason.timer) {
+                                console.log('Deleting')
+                            }
+                        })
+                    }
+                    // window.location.reload(false);
+                });
         }
     };
 
     //<---------- Function For Payment ----------->
-    
-    const purchase=()=>{
-        const order={
+
+    const purchase = () => {
+        const order = {
             cus_name: user?.displayName,
             cus_email: user?.email,
-            product_name:name,
+            product_name: name,
             product_profile: details,
             product_image: url,
             total_amount: parseInt(price),
         }
-        fetch(`https://serene-coast-79100.herokuapp.com/init`,{
-            method:'POST',
-            headers:{
-                "content-type":"application/json"
+        fetch(`${process.env.REACT_APP_API_KEY}/init`, {
+            method: 'POST',
+            headers: {
+                "content-type": "application/json"
             },
             body: JSON.stringify(order)
         })
-        .then(res=>res.json())
-        .then(data=>{
-            window.location.replace(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                window.location.replace(data);
+            })
     }
 
     return (
@@ -83,7 +83,7 @@ const MyOrder = ({order}) => {
                 <div className="d-flex justify-content-between align-items-center myBtn">
                     <h4 className="text-light">Price: <span className="text-danger">${price}</span></h4>
                     <button onClick={purchase} className="btn btn-success py-2">Procced To Pay</button>
-                    <button onClick={()=>handleDelete (_id)} className="btn btn-danger py-2">Delete Order</button>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-danger py-2">Delete Order</button>
                 </div>
             </div>
         </div>

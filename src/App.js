@@ -17,57 +17,61 @@ import MyOrders from './Page/Dashboard/MyOrders/MyOrders';
 import RateUs from './Page/Dashboard/RateUs/RateUs';
 import Home from './Page/Home/Home/Home';
 import Success from './Page/Dashboard/MyOrder/Success';
+import OurBlogs from './Page/OurBlogs/OurBlogs';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
-          <Header/>
-            <Switch>
-              <Route exact path='/'>
-                <Home/>
-              </Route>    
-              <Route path='/home'>
-                <Home/>
-              </Route>        
-              <Route path='/explore'>
-                <Explore/>
-              </Route>    
-              <PrivateRoute path='/purchase/:orderId'>
-                <Purchase/>
-              </PrivateRoute>    
-              <Route path='/dashboard'>
-                <Dashboard/>
-              </Route>    
-              <Route path='/myOrders'>
-                <MyOrders/>
-              </Route>    
-              <Route path='/manageOrders'>
-                <ManageOrders/>
-              </Route>
-              <Route path='/aboutus'>
-                <About/>
-              </Route>    
-              <Route path='/userRating'>
-                <RateUs/>
-              </Route>    
-              <Route path='/signup'>
-                <Register/>
-              </Route>    
-              <Route path='/signin'>
-                <Login/>
-              </Route>    
-              <Route path='/success'>
-                <Success/>
-              </Route>    
-              <Route path='*'>
-                <Error/>
-              </Route>    
-            </Switch>
-            <Footer/>    
-        </Router> 
-        </AuthProvider>
+          <Header />
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route path='/home'>
+              <Home />
+            </Route>
+            <Route path='/explore'>
+              <Explore />
+            </Route>
+            <PrivateRoute path='/purchase/:orderId'>
+              <Purchase />
+            </PrivateRoute>
+            <Route path='/dashboard'>
+              <Dashboard />
+            </Route>
+            <Route path='/myOrders'>
+              <MyOrders />
+            </Route>
+            <Route path='/manageOrders'>
+              <ManageOrders />
+            </Route>
+            <Route path='/aboutus'>
+              <About />
+            </Route>
+            <Route path='/blogs'>
+              <OurBlogs />
+            </Route>
+            <Route path='/userRating'>
+              <RateUs />
+            </Route>
+            <Route path='/signup'>
+              <Register />
+            </Route>
+            <Route path='/signin'>
+              <Login />
+            </Route>
+            <Route path='/success'>
+              <Success />
+            </Route>
+            <Route path='*'>
+              <Error />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

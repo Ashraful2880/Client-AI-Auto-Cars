@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import {Switch,Route,Link,useRouteMatch} from "react-router-dom";
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import useAuth from '../../../Hooks/UseAuth';
 import AddProduct from '../AddProduct/AddProduct';
 import DashboardHome from '../DashboardHome/DashboardHome';
@@ -13,24 +13,24 @@ import RateUs from '../RateUs/RateUs';
 import './Dashboard.css';
 
 const Dashboard = () => {
-    const[admin,setAdmin]=useState(false);
+    const [admin, setAdmin] = useState(false);
     let { path, url } = useRouteMatch();
-    const {user,handleSignOut}=useAuth();
-//<----------------- Load Admin Data From Database --------------->
-    useEffect(()=>{
-        fetch(`https://serene-coast-79100.herokuapp.com/user/${user?.email}`)
-        .then(res=>res.json())
-        .then(data=>setAdmin(data.admin))
-    },[user.email]);
+    const { user, handleSignOut } = useAuth();
+    //<----------------- Load Admin Data From Database --------------->
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_KEY}/user/${user?.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email]);
 
-   const myFunction=()=>{
-       const toggleButton=document.getElementById("toogleDiv");
-       if (toggleButton.style.display === "none") {
-        toggleButton.style.display = "block";
-      } else {
-        toggleButton.style.display = "none";
-      }
-   }
+    const myFunction = () => {
+        const toggleButton = document.getElementById("toogleDiv");
+        if (toggleButton.style.display === "none") {
+            toggleButton.style.display = "block";
+        } else {
+            toggleButton.style.display = "none";
+        }
+    }
 
     return (
         <>
@@ -41,10 +41,10 @@ const Dashboard = () => {
                 <div className="col-md-12 col-lg-2 col-sm-12 px-0" id="toogleDiv">
                     <div className="card leftCard h-100 w-100 border-0 px-3">
                         <div className="d-flex flex-row align-items-center justify-content-center mt-4">
-                            <img className="rounded-circle h-50 text-light ms-5 border border-danger" src={user?.photoURL} alt="User-Profile"/>
+                            <img className="rounded-circle h-50 text-light ms-5 border border-danger" src={user?.photoURL} alt="User-Profile" />
                             <span className="text-light ms-5 fs-5">{user?.displayName}</span>
                         </div>
-                        <hr className="text-light"/>
+                        <hr className="text-light" />
                         <div className="d-flex flex-column align-items-center me-3">
                             <Link to={`${url}`} className="w-100 border-0 rounded-3 btn subMenu">
                                 <button className="w-100 border-0 rounded-3 btn text-light">
@@ -56,39 +56,39 @@ const Dashboard = () => {
                                     My Orders
                                 </button>
                             </Link>
-                            <Link to={`${url}/addRating`}className="w-100 border-0 rounded-3 btn subMenu">
+                            <Link to={`${url}/addRating`} className="w-100 border-0 rounded-3 btn subMenu">
                                 <button className="w-100 border-0 rounded-3 btn text-light">
                                     Rate Us
                                 </button>
                             </Link>
-                        {admin&& 
-                        <>
-                            <Link to={`${url}/manageOrders`} className="w-100 border-0 rounded-3 btn subMenu">
-                                    <button className="w-100 border-0 rounded-3 btn text-light">
-                                        Manage Orders
-                                    </button>
-                            </Link>
-                            <Link to={`${url}/addProducts`} className="w-100 border-0 rounded-3 btn subMenu">
-                                    <button className="w-100 border-0 rounded-3 btn text-light">
-                                        Add product
-                                    </button>
-                            </Link>
-                            <Link to={`${url}/manageProducts`}className="w-100 border-0 rounded-3 btn subMenu">
-                                    <button className="w-100 border-0 rounded-3 btn text-light">
-                                        Manage Product
-                                    </button>
-                            </Link>
-                            <Link to={ `${url}/makeAdmin`} className="w-100 border-0 rounded-3 btn subMenu">
-                                    <button className="w-100 border-0 rounded-3 btn text-light">
-                                        Make Admin
-                                    </button>
-                            </Link>
-                        </>
-                        }
+                            {admin &&
+                                <>
+                                    <Link to={`${url}/manageOrders`} className="w-100 border-0 rounded-3 btn subMenu">
+                                        <button className="w-100 border-0 rounded-3 btn text-light">
+                                            Manage Orders
+                                        </button>
+                                    </Link>
+                                    <Link to={`${url}/addProducts`} className="w-100 border-0 rounded-3 btn subMenu">
+                                        <button className="w-100 border-0 rounded-3 btn text-light">
+                                            Add product
+                                        </button>
+                                    </Link>
+                                    <Link to={`${url}/manageProducts`} className="w-100 border-0 rounded-3 btn subMenu">
+                                        <button className="w-100 border-0 rounded-3 btn text-light">
+                                            Manage Product
+                                        </button>
+                                    </Link>
+                                    <Link to={`${url}/makeAdmin`} className="w-100 border-0 rounded-3 btn subMenu">
+                                        <button className="w-100 border-0 rounded-3 btn text-light">
+                                            Make Admin
+                                        </button>
+                                    </Link>
+                                </>
+                            }
                             <Link onClick={handleSignOut} to="/home" className="w-100 border-0 rounded-3 btn subMenu">
-                                    <button className="w-100 border-0 rounded-3 btn text-light">
-                                        Log Out
-                                    </button>
+                                <button className="w-100 border-0 rounded-3 btn text-light">
+                                    Log Out
+                                </button>
                             </Link>
                         </div>
                     </div>
@@ -96,25 +96,25 @@ const Dashboard = () => {
                 <div className="col-md-12 col-lg-10 col-sm-12 px-0">
                     <Switch>
                         <Route exact path={path}>
-                            <DashboardHome/>
+                            <DashboardHome />
                         </Route>
                         <Route path={`${path}/myOrders`}>
-                            <MyOrders/>
+                            <MyOrders />
                         </Route>
                         <Route path={`${path}/addRating`}>
-                            <RateUs/>
+                            <RateUs />
                         </Route>
                         <Route path={`${path}/manageOrders`}>
-                            <ManageOrders/>
+                            <ManageOrders />
                         </Route>
                         <Route path={`${path}/addProducts`}>
-                            <AddProduct/>
+                            <AddProduct />
                         </Route>
                         <Route path={`${path}/manageProducts`}>
-                            <ManageProducts/>
+                            <ManageProducts />
                         </Route>
                         <Route path={`${path}/makeAdmin`}>
-                            <MakeAdmin/>
+                            <MakeAdmin />
                         </Route>
                     </Switch>
                 </div>

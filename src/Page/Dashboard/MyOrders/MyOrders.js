@@ -5,22 +5,31 @@ import '../MyOrder/MyOrder.css';
 
 
 const MyOrders = () => {
-    const {user}=useAuth();
-    const [orders,setOrders]=useState([]);
-    
-    useEffect(()=>{
-        const url=`https://serene-coast-79100.herokuapp.com/myOrders/${user.email}`;
+    const { user } = useAuth();
+    const [orders, setOrders] = useState([]);
+
+    useEffect(() => {
+        const url = `${process.env.REACT_APP_API_KEY}/myOrders/${user.email}`;
         fetch(url)
-        .then(res=>res.json())
-        .then(data=>setOrders(data))
-    },[user]);
+            .then(res => res.json())
+            .then(data => setOrders(data))
+    }, [user, orders]);
+
     return (
-        <div className="myOrder-container text-light h-100">
-            <h2 className="pt-4">Your All Orders</h2>
-            <h4 className="pb-4">Current Orders: <span className="text-danger">{orders.length}</span> </h4>
-        {
-            orders.map(order=><MyOrder key={order._id} order={order}/>)
-        }
+        <div className="myOrder-container text-light h-100 pt-5" style={{ minHeight: "85vh" }}>
+            {orders?.length > 0 ?
+                <div>
+                    <h2 className="pt-4">Your All Orders</h2>
+                    <h4 className="pb-4">Current Orders: <span className="text-danger">{orders.length}</span> </h4>
+                    {
+                        orders.map(order => <MyOrder key={order._id} order={order} />)
+                    }
+                </div> :
+                <div className="d-flex justify-content-center align-items-center pb-5">
+                    <div className="spinner-border text-danger text-center d-block" role="status">
+                    </div>
+                </div>
+            }
         </div>
     );
 };

@@ -5,16 +5,16 @@ import photo from '../../Image/key Features.jpg'
 
 const About = () => {
     return (
-        <>
-            <div className="container-fluid row mx-auto about-container">
+        <div style={{ minHeight: "85vh" }}>
+            <div className="container-fluid row mx-auto about-container pt-5">
                 <div className="mt-4 mb-3 text-white">
                     <h2>Who We Are</h2>
                     <h5>Few Words About Us</h5>
                 </div>
-                <div className="col-sm-12 col-md-12 col-lg-6 mx-auto" data-aos="fade-down"     data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div className="col-sm-12 col-md-12 col-lg-6 mx-auto" data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <img className="p-5 w-100" src={aboutCar} alt="aboutImage" />
                 </div>
-                <div className="col-sm-12 col-md-12 col-lg-6 about-text text-start"  data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div className="col-sm-12 col-md-12 col-lg-6 about-text text-start" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h2 className=" text-danger">Mr Automative</h2>
                     <hr className="text-white mb-5" />
                     <p className="mb-3">
@@ -139,7 +139,7 @@ const About = () => {
                     <img className="w-100 rounded-3" src={photo} alt="Feature Area" />
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

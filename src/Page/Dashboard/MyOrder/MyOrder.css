@@ -1,23 +1,26 @@
-.myOrder-container{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.829),rgba(0, 0, 0, 0.801)),url('../../../Image/register1.jpg');
+.myOrder-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.801)), url('../../../Image/register1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     border-radius: 10px;
-    height: 100vh;
 }
+
 .single-img {
     transition: ease-in-out 0.3s;
 }
+
 .single-img:hover {
     transform: scale(1.04);
 }
-@media screen and (max-width:538px){
-    .myBtn{
-        display: block!important;
+
+@media screen and (max-width:538px) {
+    .myBtn {
+        display: block !important;
     }
-    .myBtn button{
+
+    .myBtn button {
         margin: 2px;
     }
 }

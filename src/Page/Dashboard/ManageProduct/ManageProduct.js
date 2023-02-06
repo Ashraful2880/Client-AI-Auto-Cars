@@ -1,21 +1,21 @@
 import React from 'react';
 
-const ManageProduct = ({car}) => {
-    const{url,name,price,model,modelYear,details, _id}=car;
-    const handleDelete=(id)=>{
-        const proceed=window.confirm("Are You Sure ? Want To Delete ?");
-        if (proceed){
-            const url=`https://serene-coast-79100.herokuapp.com/deleteProduct/${id}`;
-            fetch(url,{
-                method:'DELETE'
+const ManageProduct = ({ car }) => {
+    const { url, name, price, model, modelYear, details, _id } = car;
+    const handleDelete = (id) => {
+        const proceed = window.confirm("Are You Sure ? Want To Delete ?");
+        if (proceed) {
+            const url = `${process.env.REACT_APP_API_KEY}/deleteProduct/${id}`;
+            fetch(url, {
+                method: 'DELETE'
             })
-            .then(res=>res.json())
-            .then(data=>{
-                if(data.deletedCount>0){
-                    window.alert('Deleted Successfully')
-                }
-                window.location.reload(false);
-        });
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        window.alert('Deleted Successfully')
+                    }
+                    window.location.reload(false);
+                });
         }
     };
     return (
@@ -30,7 +30,7 @@ const ManageProduct = ({car}) => {
                 <h4 className="text-danger">Price: ${price}</h4>
                 <p className="text-secondary">{details}</p>
                 <button className="btn btn-success px-5 mx-2 mb-3">Update</button>
-                <button className="btn btn-danger px-5 mx-2 mb-3" onClick={()=>handleDelete (_id)}>Delete</button>
+                <button className="btn btn-danger px-5 mx-2 mb-3" onClick={() => handleDelete(_id)}>Delete</button>
             </div>
         </div>
     );

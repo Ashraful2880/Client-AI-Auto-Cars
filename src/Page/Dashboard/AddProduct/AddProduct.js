@@ -4,29 +4,29 @@ import Swal from 'sweetalert2';
 import './AddProduct.css';
 
 const AddProduct = () => {
-    const { register, handleSubmit, reset,formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        fetch('https://serene-coast-79100.herokuapp.com/addProduct',{
-            method:"POST",
-            headers:{
-                'content-type':'application/json'
+        fetch(`${process.env.REACT_APP_API_KEY}/addProduct`, {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(data)
+            body: JSON.stringify(data)
         })
-        .then(res=>res.json())
-        .then(result=>{
-            if(result.acknowledged){
-                Swal.fire({
-                    position: 'center-center',
-                    icon: 'success',
-                    title: 'Car Added Successfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })
-                reset();
-            }
-        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.acknowledged) {
+                    Swal.fire({
+                        position: 'center-center',
+                        icon: 'success',
+                        title: 'Car Added Successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    reset();
+                }
+            })
     };
     return (
         <div className="add-Car-container">
@@ -49,14 +49,14 @@ const AddProduct = () => {
                             <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2" placeholder="Fuel Type (Petrol/Others)" type="text" {...register("fuel", { required: true })} />
 
                             <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2" placeholder="Car Color" type="text" {...register("color", { required: true })} />
-                            
+
                             <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2" placeholder="Model Year" type="text" {...register("modelYear", { required: true })} />
 
                             <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2" placeholder="Car Price (USD)" type="number"{...register("price", { required: true })} />
 
-                            <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2 text-light" type="file"{...register("url", { required: true })}/>
+                            <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2 text-light" type="file"{...register("url", { required: true })} />
 
-                            <textarea className="w-100 p-2 mb-3 rounded-3 border-1 my-2" placeholder="Car Details Here"{...register("details", { required: true })} /> 
+                            <textarea className="w-100 p-2 mb-3 rounded-3 border-1 my-2" placeholder="Car Details Here"{...register("details", { required: true })} />
 
                             <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2 btn btn-danger" type="submit" />
                         </div>

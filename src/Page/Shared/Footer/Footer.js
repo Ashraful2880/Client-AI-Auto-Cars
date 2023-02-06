@@ -24,11 +24,11 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-6 text-start text-white">
-                        <h5 className="mb-4 text-danger ">About Us</h5>
-                        <p>Our Success Story</p>
-                        <p>Tips for New Customer</p>
-                        <p>Career With Us</p>
-                        <p>Be our Partner</p>
+                    <h5 className="mb-4 text-danger ">About Us</h5>
+                    <p>Our Success Story</p>
+                    <p>Tips for New Customer</p>
+                    <p>Career With Us</p>
+                    <p>Be our Partner</p>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12 text-start text-white">
                     <h5 className="mb-4 text-danger">Contact Information</h5>
@@ -44,9 +44,9 @@ const Footer = () => {
                 </div>
                 <hr className="text-white" />
             </div>
-                <div>
-                    <p className="text-white">Copyright &copy; 2021-All Rights Reserved- <a  className="text-danger" href="http://ashrafulislambd.com/">ashrafulislambd.com</a></p>
-                </div>
+            <div>
+                <p className="text-white">Copyright &copy; 2021-All Rights Reserved- <a className="text-danger" href="https://ashrafulislam.netlify.app/" target="blank">ashrafulislambd.com</a></p>
+            </div>
         </div>
     );
 };
