@@ -6,15 +6,12 @@ const ManageProducts = () => {
     const [cars] = useServices();
     return (
         <div style={{ minHeight: "85vh" }}>
-            <h3 className="pt-4 fw-bold">Update Products Here</h3>
-            <h4 className="mb-5">Total Products -
-                <span className="text-danger">{cars?.length}</span>
-            </h4>
-            <hr className="w-75 mx-auto" />
+            <h3 className="pt-4 fw-bold mb-5">Manage Your All Products - <span className="text-success">({cars?.length}) </span></h3>
+
             {cars?.length > 0 ?
                 <div className="container row mx-auto mb-4">
                     {
-                        cars.map(car => <ManageProduct key={car?._id} car={car} />)
+                        cars?.map(car => <ManageProduct key={car?._id} car={car} />)
                     }
                 </div> :
                 <div className="d-flex justify-content-center align-items-center">

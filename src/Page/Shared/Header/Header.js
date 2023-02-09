@@ -5,17 +5,18 @@ import './Header.css';
 import mainLogo from '../../../Image/Main-Logo.png';
 
 const Header = () => {
+
   const { user, handleSignOut } = useAuth();
   return (
     <div className='relative mb-5'>
-      <nav className="navbar navbar-dark bg navbar-expand-lg fixed-top py-2">
+      <nav className="navbar navbar-dark bg navbar-expand-lg fixed-top py-3">
         <div className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse container " id="navbarTogglerDemo01">
             <Link to="/home" className="">
-              <img className="w-50" src={mainLogo} alt="mainLogo" />
+              <img style={{ width: "36%" }} src={mainLogo} alt="mainLogo" />
             </Link>
             <ul className="navbar-nav justify-content-end w-100 me-5">
               <li className="nav-item">

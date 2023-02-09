@@ -11,7 +11,7 @@ const bgStyle = {
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
-    height: '70vh'
+    height: '100vh'
 };
 
 const MakeAdmin = () => {
@@ -43,15 +43,17 @@ const MakeAdmin = () => {
             })
     }
     return (
-        <div style={bgStyle} className="row mx-auto rate-container align-items-center ">
-            <div className="col-sm-12 col-md-12 col-lg-4 mx-auto">
-                <h2 className="text-danger">Make a Admin</h2>
-                <form onSubmit={handleMakeAdmin}>
-                    <div className="container">
-                        <input onBlur={handleAdminEmail} className="w-100 p-2 mb-3 rounded-3 border-1 my-2" type="email" placeholder="New Admin Email" required />
-                        <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2 btn btn-outline-danger" type="submit" value="Confirm" />
-                    </div>
-                </form>
+        <div style={{ minHeight: "100vh" }}>
+            <div style={bgStyle} className="row mx-auto rate-container align-items-center">
+                <div className="col-sm-12 col-md-12 col-lg-4 mx-auto">
+                    <h2 className="text-light">Make a Admin</h2>
+                    <form onSubmit={handleMakeAdmin}>
+                        <div className="container">
+                            <input onBlur={handleAdminEmail} className="w-100 p-3 mb-3 rounded-3 border-1 my-2" type="email" placeholder="New Admin Email" required />
+                            <input className="w-100 p-2 mb-3 rounded-3 border-1 my-2 btn btn-outline-danger" type="submit" value="Confirm" />
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     );

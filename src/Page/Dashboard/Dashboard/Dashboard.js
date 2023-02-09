@@ -33,17 +33,19 @@ const Dashboard = () => {
     }
 
     return (
-        <>
+        <div className="pt-4" style={{ minHeight: "100vh" }}>
             <button onClick={myFunction} className="border-0 d-flex toggle-container">
                 <i className="fas fa-bars btn btn-danger toggle-button mt-2"></i>
             </button>
             <div className="row mx-auto" >
                 <div className="col-md-12 col-lg-2 col-sm-12 px-0" id="toogleDiv">
                     <div className="card leftCard h-100 w-100 border-0 px-3">
-                        <div className="d-flex flex-row align-items-center justify-content-center mt-4">
-                            <img className="rounded-circle h-50 text-light ms-5 border border-danger" src={user?.photoURL} alt="User-Profile" />
-                            <span className="text-light ms-5 fs-5">{user?.displayName}</span>
-                        </div>
+                        <Link to="/home" className="text-decoration-none">
+                            <div className="d-flex flex-row align-items-center justify-content-center mt-4">
+                                <img className="rounded-circle w-25 text-light ms-2 border border-danger" src={user?.photoURL} alt="User-Profile" />
+                                <span className="text-light ms-3 fs-5">{user?.displayName}</span>
+                            </div>
+                        </Link>
                         <hr className="text-light" />
                         <div className="d-flex flex-column align-items-center me-3">
                             <Link to={`${url}`} className="w-100 border-0 rounded-3 btn subMenu">
@@ -119,7 +121,7 @@ const Dashboard = () => {
                     </Switch>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

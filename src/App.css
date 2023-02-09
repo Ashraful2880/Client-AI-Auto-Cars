@@ -1,4 +1,31 @@
 .App {
   text-align: center;
-  margin:auto;
+  margin: auto;
+}
+
+.input-form {
+  width: 60%;
+  float: left;
+  padding: 11px 20px;
+  border: 1px solid #FF2020;
+  outline: none;
+  border-radius: 200px;
+  box-shadow: 0px 1px 6px gray;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  border: 2px solid #FF2020;
+  border-radius: 200px;
+  background: #db1d1d;
+  color: white;
+  font-weight: 500;
+  float: left;
+  margin-left: 4px;
+  transition: all 0.5s;
+}
+
+.submit-btn:hover {
+  background: #ffff;
+  color: #FF2020;
 }

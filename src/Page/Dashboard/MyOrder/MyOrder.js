@@ -73,17 +73,17 @@ const MyOrder = ({ order }) => {
     }
 
     return (
-        <div className="row container mx-auto py-3 border rounded-3 mb-4">
-            <div className="col-lg-6 col-md-12 col-sm-12 mb-3">
-                <img className="w-50 single-img" src={url} alt="booked-pic" />
-            </div>
-            <div className="col-lg-6 col-md-12 col-sm-12 text-start px-5 pt-3">
-                <h3 className="text-danger">{name}- ({model})</h3>
-                <p className="text-light"> {details}</p>
-                <div className="d-flex justify-content-between align-items-center myBtn">
-                    <h4 className="text-light">Price: <span className="text-danger">${price}</span></h4>
-                    <button onClick={purchase} className="btn btn-success py-2">Procced To Pay</button>
-                    <button onClick={() => handleDelete(_id)} className="btn btn-danger py-2">Delete Order</button>
+        <div className="col-sm-12 col-md-6 col-lg-4">
+            <img className="w-100 single-img" src={url} alt="booked-pic" />
+            <div className="border border-secondary rounded">
+                <h3 className="text-light bg-danger py-2">{name}- ({model})</h3>
+                <h4 className="text-light text-start pt-3 px-4">
+                    Price: <span className="text-danger">${price}</span>
+                </h4>
+                <p className="text-secondary text-start px-4"> {details}</p>
+                <div className="d-flex align-items-center myBtn px-4 pb-4">
+                    <button onClick={purchase} className="btn btn-success py-2 me-2">Procced To Pay</button>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-danger py-2 ms-2">Delete Order</button>
                 </div>
             </div>
         </div>

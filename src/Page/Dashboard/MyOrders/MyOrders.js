@@ -16,14 +16,17 @@ const MyOrders = () => {
     }, [user, orders]);
 
     return (
-        <div className="myOrder-container text-light h-100 pt-5" style={{ minHeight: "85vh" }}>
+        <div className="myOrder-container text-light h-100 pt-5" style={{ minHeight: "100vh" }}>
             {orders?.length > 0 ?
                 <div>
-                    <h2 className="pt-4">Your All Orders</h2>
-                    <h4 className="pb-4">Current Orders: <span className="text-danger">{orders.length}</span> </h4>
-                    {
-                        orders.map(order => <MyOrder key={order._id} order={order} />)
-                    }
+                    <h4 className="pb-4">All Current Orders: <span className="text-danger">
+                        {orders.length}</span>
+                    </h4>
+                    <div className="container row mx-auto mb-4">
+                        {
+                            orders?.map(order => <MyOrder key={order._id} order={order} />)
+                        }
+                    </div>
                 </div> :
                 <div className="d-flex justify-content-center align-items-center pb-5">
                     <div className="spinner-border text-danger text-center d-block" role="status">

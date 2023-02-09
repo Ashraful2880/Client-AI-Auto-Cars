@@ -28,83 +28,85 @@ const About = () => {
                     <p className="mb-3">
                         We believe that our sales and service staff should be informed, and helpful, without being pushy or overbearing. We want you to be our customer for life and we work hard to earn your business each and every time we interact with you.
                     </p>
-                    <div className="row text-light">
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
-                                <h5 className="d-inline ms-3">First Class Service</h5>
+                    <div className="border ps-4 pb-4" style={{ borderRadius: "20px" }}>
+                        <div className="row text-light">
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
+                                    <h5 className="d-inline ms-3">First Class Service</h5>
+                                </div>
+                            </div>
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
+                                    <h5 className="d-inline ms-3">Fully Secured</h5>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
-                                <h5 className="d-inline ms-3">Fully Secured</h5>
+                        <div className="row text-light">
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
+                                    <h5 className="d-inline ms-3">Premium Products</h5>
+                                </div>
+                            </div>
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
+                                    <h5 className="d-inline ms-3">Awesome Services</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="row text-light">
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
-                                <h5 className="d-inline ms-3">Premium Products</h5>
+                        <div className="row text-light">
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
+                                    <h5 className="d-inline ms-3">5 Year Warranty</h5>
+                                </div>
+                            </div>
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
+                                    <h5 className="d-inline ms-3">10+ Years Experience</h5>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
-                                <h5 className="d-inline ms-3">Awesome Services</h5>
+                        <div className="row text-light">
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
+                                    <h5 className="d-inline ms-3">Wide Range Brands</h5>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="row text-light">
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
-                                <h5 className="d-inline ms-3">5 Year Warranty</h5>
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
+                                    <h5 className="d-inline ms-3">Trusted By Clients</h5>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
-                                <h5 className="d-inline ms-3">10+ Years Experience</h5>
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
+                                    <h5 className="d-inline ms-3">Qualified Salesman</h5>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="row text-light">
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 mt-4 rounded-circle"></i>
-                                <h5 className="d-inline ms-3">Wide Range Brands</h5>
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
+                                    <h5 className="d-inline ms-3">After Sales Support</h5>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
-                                <h5 className="d-inline ms-3">Trusted By Clients</h5>
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
+                                    <h5 className="d-inline ms-3">Easy Payment</h5>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
-                                <h5 className="d-inline ms-3">Qualified Salesman</h5>
-                            </div>
-                        </div>
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
-                                <h5 className="d-inline ms-3">After Sales Support</h5>
-                            </div>
-                        </div>
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
-                                <h5 className="d-inline ms-3">Easy Payment</h5>
-                            </div>
-                        </div>
-                        <div className="col-sm-12 col-md-6 col-lg-6 text-start">
-                            <div className="d-inline">
-                                <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
-                                <h5 className="d-inline ms-3">Premium Services</h5>
+                            <div className="col-sm-12 col-md-6 col-lg-6 text-start">
+                                <div className="d-inline">
+                                    <i className="fas fa-check border border-3 border-danger p-2 rounded-circle mt-4"></i>
+                                    <h5 className="d-inline ms-3">Premium Services</h5>
+                                </div>
                             </div>
                         </div>
                     </div>

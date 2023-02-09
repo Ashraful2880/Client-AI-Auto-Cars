@@ -42,7 +42,14 @@ const FeatureCars = () => {
                             </div>
                         )}
                     <div className="my-3">
-                        <button className="btn btn-danger" onClick={showMoreItems}>Load More</button>
+
+                        {cars &&
+                            cars?.length <= visible ?
+                            <h4 className="text-danger">You are Almost End</h4> :
+                            <button onClick={() => setVisible(visible + 3)} className="btn btn-danger">
+                                Load More
+                            </button>
+                        }
                     </div>
                 </div> :
                 <div className="d-flex justify-content-center align-items-center pb-5">
